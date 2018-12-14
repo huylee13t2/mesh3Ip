@@ -1,0 +1,286 @@
+<header app-navbar id="header-con"></header>
+<div id="main">
+  <div app-sidebar class="col-md-3 col-sm-12 col-xs-12 sidebar "></div>
+  <div class=" main-content">
+    <div class="content-wrapper">
+      <div class="main-content-in">
+        <div class="row">
+          <div class="col-md-3 pp-left">
+            <div class="box-min  box-none-bg ">
+              <div class="box-head box-fff-bg margin-b-15">
+                <div class="box-head-link">
+                  <a routerLink="/new" class="head-link-a">
+                    <i class="fa fa-file-text head-link-i"></i> انشاء فتورة جديدة
+                    <button class="btn btn-link btn-link-button  " type="button" data-toggle="dropdown">
+                      <i class="fa fa-ellipsis-h"></i>
+                    </button>
+                  </a>
+                </div>
+                <!--box-head-->
+              </div>
+              <!--box-head-->
+              <div class="box-head box-fff-bg margin-b-15">
+                <div class="box-head-link">
+                  <span class="head-link-a">
+                    <i class="fa fa-area-chart Menu-icon"></i>اجمالي الفواتير
+                    <span class="  btn-link-button lang_en btn-link-text-decoration-none  ">
+                      {{total | currency:' SR '}}
+                    </span>
+                  </span>
+                </div>
+                <!--box-head-->
+              </div>
+              <!--box-head-->
+              <div class="box-head box-fff-bg margin-b-15">
+                <div class="box-head-link">
+                  <span class="head-link-a">
+                    <i class="fa fa-area-chart Menu-icon"></i>الفواتير المدفوعه
+                    <span class="  btn-link-button lang_en btn-link-text-decoration-none  ">
+                      {{total_done | currency:' SR '}}
+                    </span>
+                  </span>
+                </div>
+                <!--box-head-->
+              </div>
+              <!--box-head-->
+              <div class="box-head box-fff-bg margin-b-15">
+                <div class="box-head-link">
+                  <span class="head-link-a">
+                    <i class="fa fa-area-chart Menu-icon"></i>فواتير بإنتظار الدفع
+                    <span class="  btn-link-button lang_en btn-link-text-decoration-none  ">
+                      {{total_waiting | currency:' SR '}}
+                    </span>
+                  </span>
+                </div>
+                <!--box-head-->
+              </div>
+              <!--box-head-->
+              <div class="box-head box-fff-bg margin-b-15">
+                <div class="box-head-link">
+                  <span class="head-link-a">
+                    <i class="fa fa-area-chart Menu-icon"></i>فواتير ملغيه
+                    <span class="  btn-link-button lang_en btn-link-text-decoration-none  ">
+                      {{total_cancel | currency:' SR '}}
+                    </span>
+                  </span>
+                </div>
+                <!--box-head-->
+              </div>
+            </div>
+            <!--box-min-->
+          </div>
+          <!-- col-md-8 -->
+          <div class="col-md-9">
+            <div class="box-min">
+              <div class="box-head">
+                <ul class="nav nav-tabs">
+                  <li [ngClass]="{'active': filter=='all'}" (click)="setFilter('all')"><a>الكل</a></li>
+                  <li [ngClass]="{'active': filter=='waiting'}" (click)="setFilter('waiting')"><a> بانتظار
+                      الدفع </a></li>
+                  <li [ngClass]="{'active': filter=='done'}" (click)="setFilter('done')"><a>مدفوع</a></li>
+                  <li [ngClass]="{'active': filter=='cancel'}" (click)="setFilter('cancel')"><a>ملغي</a></li>
+                </ul>
+              </div>
+              <!--box-head-->
+              <div class="box-min-content">
+                <div class="text-center" *ngIf="loading"><i class="fa fa-spin fa-spinner fa-3x color-orange"></i></div>
+                <div class="table-responsive table-c" *ngIf="!loading">
+                  <div class="text-center" *ngIf="!billings.length">
+                    <span>لا يوجد لديك فواتير</span>
+                  </div>
+                  <table class="table">
+                    <tbody>
+                      <tr *ngFor="let billing of billings" (click)="showDetails(billing)">
+                        <td style="width:50px;">
+                          <i class="fa fa-file-text table-icon"></i>
+                        </td>
+                        <td style="width:200px;">
+                          <a data-toggle="modal" data-target="#Invoices_popup">
+                            <span class="table_span_string lang_en">INV{{billing._number}}</span>
+                            <span class="table_span_small">فاتورة</span>
+                          </a>
+                        </td>
+                        <td>
+                          <a data-toggle="modal" data-target="#Invoices_popup">
+                            <span class="table_span_string lang_en">{{billing.date | date}}</span>
+                            <span class="table_span_small"> تاريخها </span>
+                          </a>
+                        </td>
+                        <td>
+                          <a>
+                            <span class="table_span_string lang_en">{{billing.total | currency:' SR '}}</span>
+                            <span class="table_span_small"> الاجمالي</span>
+                          </a>
+                        </td>
+                        <td>
+                          <a data-toggle="modal" data-target="#Invoices_popup">
+                            <div class="table_span_lable">
+                              <span class="table_span_lable_color" [ngClass]="{'lable_color_green' : billing.status=='done', 'lable_color_orange' : billing.status=='waiting', 'lable_color_pink' : billing.status=='cancel'}"></span>
+                              <span class="table_span_lable_text">{{status[billing.status]}}</span>
+                            </div>
+                          </a>
+
+                        </td>
+                        <td style="width:50px;">
+                          <div class="dropdown">
+                            <button class="btn btn-link btn-link-table " type="button" data-toggle="dropdown">
+                              <i class="fa fa-ellipsis-h"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="" (click)="changeStatus(billing, 'done')">مدفوع</a></li>
+                              <li><a class="" (click)="changeStatus(billing, 'waiting')">غير مدفوع</a></li>
+                              <li><a class="" (click)="changeStatus(billing, 'cancel')">ملغي</a></li>
+                              <li class="" role="separator" class="divider"></li>
+                              <li><a (click)="deleteBilling(billing.id)" class="color-red"><i class="fa fa-minus-circle"></i>
+                                  حذف</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+
+                  <div class="read-more-home read-more-slide-cat text-center" *ngIf="billings.length >= limit && billings_all.length > billings.length">
+                    <i class="fa fa-spin fa-spinner fa-3x color-orange" *ngIf="moreLoading"></i>
+                    <button type="button" *ngIf="!moreLoading" (click)="getMore()" class="hvr-bounce-to-right"><i class="fa fa-plus-circle"></i>
+                      المزيد</button>
+                  </div>
+                </div>
+                <!-- table-responsive -->
+
+
+                <!-- Modal -->
+                <div id="Invoices_popup" class="modal fade Invoices_popup" role="dialog">
+                  <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="row" *ngIf="billing_details">
+                        <div class="col-md-4 Invoices_popup_right">
+                          <div class="Invoices_popup_right_row">
+                            <div class="Invoices_popup_right_row_in ">
+                              <div class="Invoices_popup_right_col_main clearfix">
+                                <div class="col-sm-6">
+                                  <span class="table_span_small">فاتورة</span>
+                                  <span class="table_span_string">#INV{{billing_details._number}}</span>
+                                </div>
+                                <!-- col-sm-6 -->
+                                <div class="col-sm-6">
+                                  <div class="pp-left">
+                                    <button type="button" class="btn btn-success text-white"> {{status[billing_details.status]}} </button>
+                                  </div>
+                                  <!-- table_span_lable -->
+                                </div>
+                                <!-- col-sm-6 -->
+                              </div>
+                              <!-- Invoices_popup_right_col_main -->
+                              <div class="Invoices_popup_right_col_main clearfix">
+                                <div class="col-sm-12">
+                                  <span class="table_span_small"> الي</span>
+                                  <span class="table_span_string  ">{{billing_details.company_name}}</span>
+                                  <span class="table_span_string lang_en">{{billing_details.company_email}}</span>
+                                </div>
+                                <!-- col-sm-12 -->
+                              </div>
+                              <!-- Invoices_popup_right_col_main -->
+                              <div class="Invoices_popup_right_col_main clearfix">
+                                <div class="col-sm-12">
+                                  <span class="table_span_small"> تاريخها </span>
+                                  <span class="table_span_string lang_en">{{billing_details.date | date}}</span>
+                                </div>
+                                <!-- col-sm-12 -->
+                              </div>
+                              <!-- Invoices_popup_right_col_main -->
+                              <div class="Invoices_popup_right_col_main_pdf">
+                                <a routerLink="/export/{{ billing_details.id }}" target="_blank"><i class="fa fa-print"></i>
+                                <!-- <a routerLink="/export/{{ billing_details.id }}" target="_blank"  data-dismiss="modal" (click)="createPDFInvoice(billing_details._number)"><i class="fa fa-print"></i> -->
+                                  تصدير الفاتورة PDF </a> <br>
+                                <a (click)="showShareLink = !showShareLink" ><i class="fa fa-print"></i> مشاركة
+                                  رابط الفاتورة </a>
+                                <input type="text" class="form-control share-input-home-page" *ngIf="showShareLink"
+                                  [value]="'https://ftortk.io/export/' + billing_details.id">
+                              </div>
+                              <!-- Invoices_popup_right_col_main -->
+                            </div>
+                            <!-- Invoices_popup_right_row_in -->
+                          </div>
+                          <!-- Invoices_popup_right_row -->
+                        </div>
+                        <!-- col-md-4 -->
+                        <div class="col-md-8 Invoices_popup_left">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times-circle"></i></button>
+                          </div>
+                          <!-- modal-header -->
+                          <div class="modal-body">
+                            <div class="table-responsive table-c table-Invoices-popup">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>الوصف</th>
+                                    <th>الوحدة</th>
+                                    <th>الكمية</th>
+                                    <th style="width: 100px;"> الاجمالي </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let p of billing_details.products">
+                                    <td>{{p.description}}</td>
+                                    <td class="lang_en">{{p.price | currency:' SR '}}</td>
+                                    <td class="lang_en">{{p.quantity}}</td>
+                                    <td class="lang_en">{{(p.price * p.quantity) | currency:' SR '}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="total-table"> المجموع</td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td class="lang_en">{{billing_details.total | currency:' SR '}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="total-table"> القيمة المضافة {{fees}}%</td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td>{{ billing_details.total_fees | currency:' SR '}}</td>
+                                  </tr>
+
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="text-left Invoices-popup-total">
+                              <h2> الاجمالي : <span>{{ billing_details.total_all | currency:' SR '}}</span> </h2>
+                            </div>
+                            <!-- table-responsive -->
+
+
+                          </div>
+                          <!-- modal-body -->
+                        </div>
+                        <!-- col-md-8 -->
+                      </div>
+                      <!-- row -->
+
+                    </div>
+                    <!-- modal-content -->
+                  </div>
+                  <!-- modal-dialog -->
+                </div>
+                <!-- Invoices_popup -->
+
+
+              </div>
+              <!--box-min-content-->
+            </div>
+            <!--box-min-->
+          </div>
+          <!-- col-md-8 -->
+        </div>
+        <!-- row -->
+      </div>
+      <!--content-wrapper -->
+    </div>
+    <!--col-md-9 main-content -->
+    <footer id="footer" app-footer></footer>
+  </div>
+
+</div>

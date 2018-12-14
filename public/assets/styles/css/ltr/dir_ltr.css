@@ -1,0 +1,248 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	right: 0;
+	z-index: 99;
+}
+.sf-menu > li {
+	float: right;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	right: 100%;
+}
+
+
+/*** DEMO SKIN ***/
+.sf-menu {
+	float: right;
+	 
+	 
+}
+.sf-menu ul {
+	box-shadow: 2px 2px 6px rgba(0,0,0,.2);
+	min-width: 12em; /* allow long menu items to determine submenu width */
+	*width: 12em; /* no auto sub width for IE7, see white-space comment below */
+}
+.sf-menu a {
+ 	padding: .75em 1em;
+	text-decoration: none;
+	zoom: 1; /* IE7 */
+}
+.sf-menu > li > a {
+	line-height: 20px;
+	color: #333;
+	font-size: 14px;
+border-left:1px solid #a7a9a9;
+position:relative;
+}
+.sf-menu > li > a:after{
+	 
+	
+	}
+.sf-menu a {
+	color: #333;
+}
+#menu-top1 .sf-menu   li    { color: #fff;  font-size:14px; text-align:center; }
+#menu-top1 .sf-menu   li  i  {     padding-left: 5px;font-size:16px;  }
+#menu-top1 .sf-menu   li a{  padding-top:0; }
+#menu-top1 .sf-menu li span{
+    
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+		  height:26px;
+	padding-right:10px;
+	padding-left:10px;
+	}
+#menu-top1 .sf-menu { float:left;}	
+.sf-menu li {
+ 	white-space: nowrap; /* no need for Supersubs plugin */
+	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
+	-webkit-transition: background .2s;
+	transition: background .2s;
+	
+	padding: 11px 5px;
+}
+
+.sf-menu ul li {
+	background: #333;
+}
+.sf-menu ul ul li {
+	background: #333;
+}
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+	background: #333;
+	/* only transition out, not in */
+	-webkit-transition: none;
+	transition: none;
+}
+.sf-menu li li:hover,
+.sf-menu li li.sfHover {
+	background: #e09a14;
+ }
+.sf-menu li li a { color:#fff   ;}
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: #CCC; /* edit this to suit design (no rgba in IE8) */
+	 
+	 
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: white; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-right-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-right-color: rgba(255,255,255,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-right-color: white;
+}
+/*#menu-top ul li { border-right:1px solid #bee4f6;border-left:1px solid #bea4a4; }
+#menu-top ul li:first-child { border-right:none; }
+#menu-top ul li:last-child  {   border-left:none; }
+#menu-top ul ul li { border:none;  }*/
+#menu-top .dropdown-topbar ul li { border:none;  }
+
+.sfHover > a { color:#fff !important  ;}
+
+/*********************************************/
+#menu-top {   position:relative; }
+#menu-top a {padding: 0 1em    !important; }
+#menu-top .sf-arrows .sf-with-ul {
+    padding-left: 2.8em !important;
+}
+#menu-top .sf-menu > li ,
+#menu-top .sf-menu >  li  > .sfHover {
+/*border-top:6px solid #333;
+margin-top:-6px;*/
+}
+
+ 
+
+
+#menu-top .sf-menu > li:hover,
+#menu-top .sf-menu >  li  > .sfHover {
+/*	border-top:6px solid #18b8f3;
+	margin-top:-6px;*/
+ 		 }
+#menu-top .sf-menu > li:hover > a{ color:#fff; background:#333; border-left:1px solid #333;}
+
+.logo-header ,#content{  }
+.ads-header ,#sidebar{  }
+
+.ads-header img{  }
+/*******/
+.dropdown-topbar{
+width: 100%;
+height: 29px;
+margin-bottom: 5px;
+margin-top: 5px;
+border: 1px solid #DADADA;
+background: -moz-linear-gradient(90deg, #eeeeee 0%, #fafafa 100%);/* FF3.6+ */
+background: -webkit-gradient(linear, 90deg, color-stop(0%, #eeeeee), color-stop(100%, #fafafa));/* Chrome,Safari4+ */
+background: -webkit-linear-gradient(90deg, #eeeeee 0%, #fafafa 100%);/* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(90deg, #eeeeee 0%, #fafafa 100%);/* Opera 11.10+ */
+background: -ms-linear-gradient(90deg, #eeeeee 0%, #fafafa 100%);/* IE10+ */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#fafafa', GradientType='0'); /* for IE */
+background: linear-gradient(0deg, #eeeeee 0%, #fafafa 100%);/* W3C */
+}
+#mainnav .dropdown-topbar {  width:85%; height: 28px;float:right}
+.dropdown-topbar { display:block; text-align:right; padding-right:10px; line-height:27px;  color:#c7c5c5}
+.dropdown-topbar a {  color:#333;display:block;}
+.dropdown-toggle .fa-bars{  float: left;
+    font-size: 25px;
+    line-height: 27px;
+    margin-left: 20px;
+	color:#c7c5c5}
+.dropdown-topbar .dropdown-menu {
+	border: 1px solid #DADADA;
+	width:100.3%;
+	left:-1px;
+	margin:0;
+	border-radius:0;
+	padding-bottom:0;
+	padding-top:0;
+	}	
+.dropdown-topbar .dropdown-menu li a {
+	border-bottom: 1px solid #DADADA;
+
+ 	}	
+.dropdown-topbar .dropdown-menu li  li a  {
+	border-top: 1px solid #DADADA;
+	padding-right:40px;
+	}
+ .dropdown-topbar .dropdown-menu li  li li a {
+	border-top: 1px solid #DADADA;
+	padding-right:60px;
+	}
+ 
+.dropdown-topbar li  a:hover, .dropdown-topbar  li a:focus{
+		background:#10a1d6;
+		padding-right:10px;
+		color:#fff;
+		-webkit-transition: all 1s ease;/* Safari 3.2+, Chrome */
+		-moz-transition: all 1s ease;/* Firefox 4-15 */
+		-o-transition: all 1s ease;/* Opera 10.5-12.00 */
+		transition: all 1s ease;/* Firefox 16+, Opera 12.50+ */
+	}
+.postMeta ul li {
+	float: right;
+ 
+	 
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+

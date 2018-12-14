@@ -1,0 +1,117 @@
+<section id="page-a4">
+
+  <div class="container" style="padding: 20px;" *ngIf="loading.billing || (!loading.billing && !billing)">
+    <div class="text-center margin-t-10" *ngIf="loading.billing">
+      <i class="fa fa-spin fa-spinner fa-3x color-orange"></i>
+    </div>
+    <div *ngIf="!loading.billing && !billing">
+      <div class="alert alert-danger">الفاتورة غير موجودة</div>
+      <div class="text-center">
+        <a routerLink="/">الصفحة الرئيسية</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-A4" id="page-A4" *ngIf="!loading.billing && billing">
+    <header>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="a4-head-right">
+            <ul>
+              <li> <span>فاتورة</span> #INV{{billing._number}}</li>
+              <li> <span>الي</span> : {{billing.company_name}}</li>
+              <li> <span>تاريخها</span> {{billing.date | date}}</li>
+              <li *ngIf="fees_number"> <span> الرقم الضريبي</span> {{fees_number}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="head-logo">
+            <div class="camp-logo">
+              <i *ngIf="loading.logo" class="fa fa-spin fa-spinner fa-3x color-orange"></i>
+              <img *ngIf="!loading.logo" style="max-width: 150px;max-height: 60px;width: auto; height: auto;" [src]="logoUrl || './assets/images/sm-logo.svg'"
+              alt="الشعار">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main-A4">
+      <div class="  table-c table-A4 table-Invoices-popup">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>الوصف</th>
+              <th>الوحدة</th>
+              <th>الكمية</th>
+              <th>الاجمالي</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of billing.products">
+              <td>{{p.description}}</td>
+              <td class="lang_en">{{p.price | currency:' SR '}}</td>
+              <td class="lang_en">{{p.quantity}}</td>
+              <td class="lang_en">{{(p.price * p.quantity) | currency:' SR '}}</td>
+            </tr>
+            <tr>
+              <td class="total-table"> المجموع</td>
+              <td class="lang_en">{{billing.total | currency:' SR '}}</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr *ngIf="loading.account">
+              <td colspan="4" class="text-center" *ngIf="loading.account"><i class="fa fa-spin fa-spinner fa-3x color-orange"></i></td>
+            </tr>
+            <tr *ngIf="!loading.account">
+              <td> القيمة المضافة {{billing.fees}}%</td>
+              <td>{{ billing.total_fees | currency:' SR '}}</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td class="total-table"> الاجمالي</td>
+              <td class="total-table">{{ billing.total_all | currency:' SR '}}</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- table-responsive -->
+      <div class="table-c  table-Invoices-popup">
+        <i *ngIf="loading.account" class="fa fa-spin fa-spinner fa-3x color-orange"></i>
+        <table *ngIf="!loading.account && accountInfo" class="table">
+          <thead>
+            <tr>
+              <th class="total-table"> معلومات الدفع</th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width:50%"> البنك : {{banks[accountInfo.bank_name]}} </td>
+              <td style="width:50%">باسم : {{accountInfo.name}}</td>
+            </tr>
+            <tr>
+              <td style="width:50%"> رقم الحساب : {{accountInfo.number}} </td>
+              <td style="width:50%"> رقم الأيبان : {{accountInfo.iban}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      
+      <!-- Invoices_popup_right_col_main -->
+    </main>
+  </div>
+  <!-- page-A4 -->
+
+  <div [hidden]="isPDF" class="print-foot-A4">
+    <i *ngIf="downloading || loading.logo || loading.account" class="fa fa-spin fa-spinner fa-3x color-orange"></i>
+    <button type="button" *ngIf="!downloading && !loading.logo && !loading.account" class="btn btn-success text-white" (click)="createPDFInvoice(billing._number)">
+      <i class="fa fa-file-pdf-o"></i> تحميل PDF </button>
+    </div>
+  </section>

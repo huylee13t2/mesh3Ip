@@ -1,0 +1,200 @@
+<header app-navbar id="header-con"></header>
+<div id="main">
+  <div app-sidebar class="col-md-3 col-sm-12 col-xs-12 sidebar "></div>
+  <div class="main-content">
+    <div class="content-wrapper">
+      <div class="main-content-in">
+        <div class=" ">
+          <div class="box-min2 clearfix">
+            <div class="col-md-3 pp-left">
+              <div class="box-min  box-none-bg ">
+                <div class="box-head margin-b-15">
+                  <div class="box-head-link">
+                    <a class="head-link-a">
+                      كيف تملأ الحساب البنكي
+                      <button class="btn btn-link btn-link-button  " type="button" data-toggle="dropdown">
+                        <i class="fa fa-question-circle"></i>
+                      </button>
+                    </a>
+                  </div>
+                  <!--box-head-link-->
+                </div>
+                <!--box-head-->
+                <div class="info-box-Invoices">
+                  <div class="info-box-main margin-t-70">
+                    <h2> تفاصيل الحساب</h2>
+                    <p>
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                      لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
+                      أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                    </p>
+                  </div>
+                  <!-- info-box-main -->
+                  <div class="info-box-main">
+                    <h2> تفاصيل البنك و الرسوم</h2>
+                    <p>
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                      لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
+                      أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                    </p>
+                  </div>
+                  <!-- info-box-main -->
+                </div>
+                <!-- info-box-Invoices -->
+              </div>
+              <!--box-min-->
+            </div>
+            <!-- col-md-8 -->
+            <div class="col-md-9 padding-r-0">
+              <div class="box-min   ">
+                <div class="box-head">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a> <span> الحسابات </span></a></li>
+                  </ul>
+                </div>
+                <!--box-head-->
+                <div class="box-min-content">
+                  <div [ngSwitch]="_error">
+                    <div class="alert alert-danger" *ngSwitchCase="'invalid'">يجب ملئ الفورم بشكل صحيح واختيار الحساب.</div>
+                    <div class="alert alert-danger" *ngSwitchCase="'account'">يجب اختيار حساب.</div>
+                    <div class="alert alert-success" *ngSwitchCase="'success'">تم حفظ التغييرات.</div>
+                  </div>
+                  <div app-loading *ngIf="loading"></div>
+                  <div class="form-main" *ngIf="!loading">
+                    <form [formGroup]="info_form" (ngSubmit)="save()">
+                      <div class="form-main-head">
+                        <h2 class="margin-t-0"><span>تفاصيل</span></h2>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="form-group select-account">
+                            <label> اختار رقم الحساب </label>
+                            <select formControlName="used_account" class="form-control">
+                              <option value="">اختار رقم الحساب</option>
+                              <option *ngFor="let account of accounts.controls" [value]="account.value.id">
+                                {{account.value.currency}} {{account.value.number}}</option>
+                            </select>
+                          </div>
+                          <!--form-group-->
+                        </div>
+                      </div>
+
+                      <div class=" Settings-form-main">
+                        <div class="Settings-clone" class="" *ngFor="let account of accounts.controls; let i = index"
+                          formArrayName="accounts">
+                          <div class="row" [formGroupName]="i">
+
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label> حدد البنك </label>
+                                <select formControlName="bank_name" class="form-control">
+                                  <option value="ahli"> الاهلى </option>
+                                  <option value="rajhi" selected> الراجحي </option>
+                                  <option value="bilad"> البلاد </option>
+                                  <option value="inma"> الإنماء </option>
+                                </select>
+                              </div>
+                              <!--form-group-->
+                            </div>
+                            <!--col-md-6-->
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label> رقم <span class="lang_en">IBAN</span> </label>
+                                <input type="text" formControlName="iban" class="form-control lang_en" placeholder=" ">
+                              </div>
+                              <!--form-group-->
+                            </div>
+                            <!--col-md-6-->
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label> اسم صاحب الحساب </label>
+                                <input type="text" formControlName="name" class="form-control" placeholder="  ادخل  اسم صاحب الحساب ">
+                              </div>
+                              <!--form-group-->
+                            </div>
+                            <!--col-md-6-->
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                <label> رقم الحسابي البنكي </label>
+                                <input type="text" formControlName="number" class="form-control" placeholder=" ادخل رقم الحساب">
+                                <input type="hidden" formControlName="id" class="form-control">
+                              </div>
+                              <!--form-group-->
+                            </div>
+                            <!--col-md-6-->
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label> العملة </label>
+                                <select formControlName="currency" class="form-control lang_en" title="العملة">
+                                  <option value="SR" selected> SR </option>
+                                  <option value="USD"> USD </option>
+                                  <option value="ERU"> ERU</option>
+                                  <option value="USD"> USD </option>
+                                </select>
+                              </div>
+                              <!--form-group-->
+                            </div>
+                            <!--col-md-6-->
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label> ضريبة القيمة المضافة </label>
+                                <select formControlName="fees" class="form-control lang_en" title=" اختار الضريبة    ">
+                                  <option value="0"> 0% </option>
+                                  <option value="5" selected> 5% </option>
+                                  <option value="10"> 10% </option>
+                                  <option value="15"> 15% </option>
+                                </select>
+                              </div>
+                              <!--form-group-->
+                            </div>
+                            <div class="col-md-6 text-left">
+                              <a (click)="deleteAccount($event, i)" *ngIf="accounts.controls.length > 1" class="btn btn-link color-red"
+                                title="حذف هذا الحساب" style="margin-top: 20px;">
+                                <i class="fa fa-minus-circle"></i>
+                                <span>حذف </span> </a>
+                            </div>
+                            <!--col-md-6-->
+                          </div>
+                        </div>
+                      </div>
+                      <!--Settings-form-main-->
+
+                      <div class="add-more-div margin-b-15">
+                        <a (click)="addAccount($event, i)" class="btn btn-link color-orange add-Settings-clone"
+                          *ngIf="accounts.controls.length < 4"> <i class="fa fa-plus-circle"></i>
+                          <span> أضافة حساب جديد</span> </a>
+                      </div>
+                      <div class="read-more-home">
+                        <div class="pull-left">
+                          <div class="read-more-home read-more-slide-cat">
+                            &nbsp;&nbsp;
+                            <button type="submit" class="hvr-bounce-to-right">حفظ</button>
+                            <button type="button" class="btn-b hvr-bounce-to-right" (click)="resetForm()">الغاء</button>
+                          </div>
+                          <!-- read-more-slide-cat -->
+                        </div>
+                        <!-- read-more-slide-cat -->
+                      </div>
+                      <!-- read-more-absolute -->
+                    </form>
+                  </div>
+                  <!--form-main-->
+                </div>
+                <!--box-min-content-->
+              </div>
+              <!--box-min-->
+            </div>
+            <!-- col-md-9 -->
+          </div>
+          <!-- box-min2 -->
+        </div>
+        <!-- row -->
+      </div>
+      <!--content-wrapper -->
+    </div>
+    <!--col-md-9 main-content -->
+    <footer id="footer" app-footer></footer>
+  </div>
+  <!--main-content-in-->
+</div>

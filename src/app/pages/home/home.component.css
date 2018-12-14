@@ -1,0 +1,19 @@
+.dropdown-menu{
+    position: absolute!important;
+    z-index: 9999!important;
+}
+
+.table-responsive{
+    overflow-y: auto;
+}
+
+.btn.btn-success.btn-active{
+    background-color: #398439;
+    color: #fff;
+}
+
+.share-input-home-page{
+    margin-top: 10px;
+    padding: 3px;
+    height: 30px;
+}

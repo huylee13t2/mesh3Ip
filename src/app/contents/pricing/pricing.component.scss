@@ -1,0 +1,110 @@
+.pricing-top {
+    background: #f2f5fa url(https://cdn.resume.io/packs/_/app/assets/images/landing/pricing/sailor-777fd3a604d849e43a0d276cd124cfe1.svg) top center no-repeat;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+    padding-top: 40px;
+}
+.pricing-main {
+    background: #f2f5fa;
+    padding-bottom: 15px;
+}
+.pricing-main-box {
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px;
+}
+.pricing-main-box-head {
+    text-align: center;
+}
+.card-price {
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 600;
+}
+.card-currency {
+    font-size: 22px;
+    line-height: 30px;
+}
+.pricing__card-caption {
+    color: #98a1b3;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+}
+.pricing__card-feature-list {
+    min-height: 200px;
+}
+.pricing__card-feature-list li {
+    line-height: 25px;
+    padding-right: 20px;
+    position: relative;
+}
+.pricing__card-feature-list li:after {
+    position: absolute;
+    content: "\f17b";
+    font-size: 14px;
+    right: 0;
+    top: 3px;
+    font-family: 'FontAwesome';
+}
+.faq-main {
+    background: #f2f5fa;
+    padding: 100px 0;
+}
+.faq-box {
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px;
+}
+.faq-home-content .panel-group {
+    margin: 0 !important;
+}
+.faq-home-content .panel-default {
+    border-color: #fff;
+    border: 0px solid #f4f4f4;
+    box-shadow: 0 0 0;
+    border-bottom: 1px solid #e3e3e3;
+    margin: 0 !important;
+}
+.faq-home-content .panel-default > .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #fff;
+    padding: 0;
+}
+.faq-home-content .panel-default > .panel-heading a {
+    color: #98a1b3;
+    padding: 15px;
+    display: block;
+}
+.img-accordion {
+    display: inline-block;
+    position: relative;
+    /* padding-left: 20px; */
+    margin-left: -10px;
+    float: left;
+    margin-top: -2px;
+    width: 24px;
+    height: 24px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease;
+}
+.paypal{
+    width: 100%;
+    text-align: center;
+    margin: 15px auto;
+    color: #98a1b3 !important;
+    width: 40%;
+}

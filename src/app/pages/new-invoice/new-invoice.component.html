@@ -1,0 +1,199 @@
+<header app-navbar id="header-con"></header>
+<div id="main">
+  <div app-sidebar class="col-md-3 col-sm-12 col-xs-12 sidebar "></div>
+  <div class=" main-content">
+    <div class="content-wrapper">
+      <div class="main-content-in">
+        <div class=" ">
+          <div class="box-min2 clearfix">
+            <div class="col-md-3 pp-left">
+              <div class="box-min  box-none-bg ">
+                <div class="box-head margin-b-15">
+                  <div class="box-head-link">
+                    <a class="head-link-a">
+                      كيف تملأ الفاتورة
+                      <button class="btn btn-link btn-link-button  " type="button" data-toggle="dropdown">
+                        <i class="fa fa-question-circle"></i>
+                      </button>
+                    </a>
+                  </div>
+                  <!--box-head-link-->
+                </div>
+                <!--box-head-->
+                <div class="info-box-Invoices">
+                  <div class="info-box-main margin-t-70">
+                    <h2>العملاء و القوالب</h2>
+                    <p>
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                      حيث
+                      يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                      التطبيق.
+                    </p>
+                  </div>
+                  <!-- info-box-main -->
+                  <div class="info-box-main  margin-t-10">
+                    <h2> تفاصيل الشركة </h2>
+                    <p>
+                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                      حيث
+                      يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                      التطبيق.
+                    </p>
+                  </div>
+                  <!-- info-box-main -->
+                </div>
+                <!-- info-box-Invoices -->
+              </div>
+              <!--box-min-->
+            </div>
+            <!-- col-md-8 -->
+            <div class="col-md-9 padding-r-0">
+              <div class="box-min   ">
+                <div class="box-head">
+                  <ul class="nav nav-tabs">
+                    <li><a><i class="fa fa-newspaper-o"></i> <span> فاتورة جديدة </span></a></li>
+                  </ul>
+                </div>
+                <!--box-head-->
+                <div class="box-min-content">
+                  <div class="form-main">
+
+                    <div [ngSwitch]="_errors">
+                      <div class="alert alert-danger alert-dismissible" *ngSwitchCase="'invalid'">
+                        <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                        <div [ngSwitch]="_invalid_errors">
+                            <span *ngSwitchCase="'company_email'">الرجاء ادخال ايميل الشركة بشكل صحيح.</span>
+                            <span *ngSwitchCase="'company_name'">الرجاء ادخال اسم الشركة.</span>
+                            <span *ngSwitchCase="'description'">الرجاء ادخال تفاصل المنتج.</span>
+                            <span *ngSwitchCase="'quantity'">الرجاء ادخال الكمية.</span>
+                            <span *ngSwitchCase="'price'">الرجاء ادخال سعر المنتج.</span>
+                            <span *ngSwitchDefault> يرجى ملئ الخانات بشكل صحيح ، جميع الخانات الزامية</span>
+                        </div>
+                      </div>
+
+                      <div class="alert alert-danger alert-dismissible" *ngSwitchCase="'reload'">
+                        <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                        <span>خطأ الرجاء اعادة تحميل الصفحة !.</span>
+                      </div>
+
+                      <div class="alert alert-success alert-dismissible" *ngSwitchCase="'success'">
+                        <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                        <span>تمت اضافة الفاتورة بنجاح.</span>
+                      </div>
+
+                      <div class="alert alert-danger alert-dismissible" *ngSwitchCase="'failed'">
+                        <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                        <span>فشلت العملية لم يتم اضافة الفاتورة.</span>
+                      </div>
+                    </div>
+
+
+                    <form [formGroup]="billing" (ngSubmit)="add()">
+                      <div class="form-main-head">
+                        <h2 class="margin-t-0"><span>تفاصيل</span></h2>
+                      </div>
+                      <div class="row">
+
+                        <div class="col-md-5">
+                          <div class="form-group">
+                            <label for="name"> ايميل الشركة </label>
+                            <input type="text" formControlName="company_email" class="form-control" placeholder="ادخل الايميل هنا">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="name">اسم الشركة </label>
+                            <input type="text" class="form-control" formControlName="company_name" placeholder="ادخل اسم الشركة هنا">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="name"> ادخل التاريخ </label>
+                            <angular2-date-picker [settings]="dateSettings" formControlName="date" placeholder="اختار التاريخ"
+                              class="form-control"></angular2-date-picker>
+                          </div>
+                        </div>
+                      </div>
+                      <!--row-->
+                      <div class="form-main-head">
+                        <h2 class=""><span> قائمة الخدمات </span></h2>
+                      </div>
+                      <div class="Settings-form-main">
+
+                        <div *ngFor="let product of products.controls; let i = index;" formArrayName="products" class="Settings-clone">
+                          <div class="row" [formGroupName]="i">
+                            <div class="col-md-5">
+                              <div class="form-group form-group-span">
+                                <label for="name"> تفاصيل الخدمة </label>
+                                <input type="text" formControlName="description" (keyup)="descCount($event)" maxlength="420"
+                                  class="form-control" placeholder="أدخل تفاصيل الخدمة">
+                                <span>{{desc_number}}</span>
+                              </div>
+                            </div>
+                            <div class="col-md-2">
+                              <div class="form-group">
+                                <label for="name"> الكمية </label>
+                                <input type="text" formControlName="quantity" numberOnly class="form-control" placeholder="20">
+                              </div>
+                            </div>
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                <label for="name"> السعر </label>
+                                <input type="text" formControlName="price" numberOnly class="form-control" placeholder="10,000">
+                              </div>
+                            </div>
+                            <div class="col-md-2 text-center" *ngIf="products.controls.length > 1">
+                              <a (click)="deleteProduct($event, i)" class="btn btn-link color-red" title="حذف هذا المنتج"
+                                style="margin-top: 20px;">
+                                <i class="fa fa-minus-circle"></i>
+                                <span>حذف </span> </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!--row-->
+
+                      </div>
+                      <!--Settings-form-main-->
+
+
+                      <div class="add-more-div">
+                        <a *ngIf="products.controls.length < 10" (click)="addProduct($event)" class="btn btn-link color-orange">
+                          <i class="fa fa-plus-circle"></i>
+                          <span>أضافة خدمة جديدة</span> </a>
+                      </div>
+
+                      <div class="read-more-home">
+                        <div class="pull-left">
+                          <div class="read-more-home read-more-slide-cat">
+                            <i class="fa fa-spin fa-spinner fa-3x color-orange" *ngIf="loading"></i>
+                            <button type="submit" *ngIf="!loading" class="hvr-bounce-to-right">
+                              حفظ الفاتورة</button>
+                            <button type="button" (click)="resetForm()" class="btn-b hvr-bounce-to-right">الغاء</button>
+                          </div>
+                          <!-- read-more-slide-cat -->
+                        </div>
+                        <!-- read-more-slide-cat -->
+                      </div>
+                      <!-- read-more-absolute -->
+                    </form>
+                  </div>
+                  <!--form-main-->
+                </div>
+                <!--box-min-content-->
+              </div>
+              <!--box-min-->
+            </div>
+            <!-- col-md-9 -->
+          </div>
+          <!-- box-min2 -->
+        </div>
+        <!-- row -->
+      </div>
+      <!--content-wrapper -->
+    </div>
+    <!--col-md-9 main-content -->
+    <footer id="footer" app-footer></footer>
+  </div>
+  <!--main-content-in-->
+
+</div>

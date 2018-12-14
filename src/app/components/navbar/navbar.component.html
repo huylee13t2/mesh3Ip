@@ -1,0 +1,81 @@
+<div class="topbar">
+  <div class="clearfix ">
+    <div class="head-logo">
+      <a routerLink="/dashboard" class="camp-logo"><img src="/assets/images/logo.svg" alt="الشعار" title="الرئيسية"></a>
+    </div>
+    <!-- icon-right -->
+    <div class="icon-right">
+      <ul>
+        <li>
+          <i class="fa fa-bars fa-top-bar navbar-toggle-c navbar-toggle-c-single"></i>
+        </li>
+      </ul>
+    </div>
+    <!-- icon-right -->
+    <div class="icon-left">
+      <ul>
+        <li class="dropdown notifications-menu">
+          <a class="dropdown-toggle notifications-menu-a" data-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-top-bar fa-bell-o"></i>
+            <span class="label label-danger"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="header">لديك 10 اشعارات جديدة</li>
+            <li>
+              <!-- inner menu: contains the actual data -->
+              <ul class="menu">
+                <li>
+                  <a>
+                    <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into
+                    the
+                    page and may cause design problems
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i class="fa fa-users text-red"></i> 5 new members joined
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i class="fa fa-user text-red"></i> You changed your username
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer"><a>View all</a></li>
+          </ul>
+        </li>
+        <li class="dropdown notifications-menu">
+          <a class="dropdown-toggle notifications-menu-a avatar-user" data-toggle="dropdown" aria-expanded="false">
+            <span> {{user.user_name}} </span><img src="/assets/images/user.png" alt="">
+          </a>
+          <ul class="dropdown-menu" style="width: 190px;top: 60px;"> 
+            <li>
+              <!-- inner menu: contains the actual data -->
+              <ul class="menu">
+                <li>
+                  <a (click)="signout($event)">
+                    <i class="fa fa-sign-out"></i> تسجيل الخروج
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </ul>
+    </div>
+    <!-- icon-left -->
+  </div>
+  <!--container-->
+</div>
+<!--topbar-->

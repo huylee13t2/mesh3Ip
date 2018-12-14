@@ -1,0 +1,77 @@
+
+.about-icon {
+    float: left;
+}
+.country-icon {
+    float: left;
+    margin-left: 0px;
+    margin-right: 7px;
+}
+
+.icon-accordion {
+    float: right;
+  }
+.search-home-like-content li a:after {
+    right: inherit;
+    left: 10px;
+    content: "\f105";
+}
+.search-home-like-content li a {
+    padding-right: 15px;
+    padding-left: 25px;
+  }
+  .footer-link li {
+      padding-right: 0px;
+      padding-left: 15px;
+  }
+  .footer-link li::after {
+      content: "\f105";
+      right:inherit;
+      left: 0;
+  }
+  .footer-copy-list li::after {
+      left: inherit;
+      right: 0;
+      border-left: 0px solid #ccc;
+      border-right: 1px solid #ccc;
+    }
+    .footer-copy-list li:last-child::after {
+        border-left: 0px solid #ccc;
+        border-right: 0px solid #ccc;
+    }
+    .login-form .Rpass {
+        float: right;
+    }
+    input[type="text"], input[type="password"], input[type="email"], textarea, input[type="file"], input[type="tel"] {
+        float: left;
+    }
+    .country-post-captcher i {
+        bottom: 0;
+        right: 0;
+        left: 38%;
+      }
+
+@media only screen and  (min-width: 1024px){
+  .p-left {
+    float: right;
+}
+.navbar-default .navbar-nav  > li > a {
+      font-weight: bold;
+  }
+  .navbar-tl4s .navbar-nav {
+      float: right;
+  }
+/**/
+.search-home-like .nav-tabs > li.active > a:after{
+  left:  inherit;
+  right: -10px;
+  top: 20px;
+
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent #37b258;
+}
+
+
+
+
+}

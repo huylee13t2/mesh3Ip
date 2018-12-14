@@ -1,0 +1,26 @@
+
+.btn.btn-success{
+    background: #e0eef2;
+    border: none;
+    color: #57626c;
+    padding: 7px 15px;
+}
+
+#page-a4{
+	background: #F5F6FA;
+}
+
+#page-A4{
+	width: 595px;
+	max-width: 595px;
+	height: 842px;
+	min-height: 842px;
+	border: 1px solid #ddd;
+	margin: 30px auto;
+	background: #fff;
+}
+.print-foot-A4{
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+}

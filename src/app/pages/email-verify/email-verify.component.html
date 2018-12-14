@@ -1,0 +1,41 @@
+<div class="login-page-main clearfix">
+
+
+  <div class="login-logo text-center margin-t-70  margin-b-70 margin-b-15">
+    <div class="camp-logo">
+      <a routerLink="/" class="margelogin"><img src="/assets/images/logo.svg" alt="الشعار" title="الرئيسية"></a>
+    </div>
+  </div>
+  <!--login-logo-->
+
+
+  <div class="col-md-4 col-md-offset-4">
+
+
+
+    <div class="box-min">
+      <div class="box-min-content">
+        <div [ngSwitch]="_error">
+          <div class="alert alert-success" *ngSwitchCase="'success'">تم ارسال رسالة تأكيد الى البريد الالكتروني.</div>
+          <div class="alert alert-danger" *ngSwitchCase="'failed'">حدث خطأ الرجاء اعادة المحاولة.</div>
+        </div>
+
+        <h4>تم ارسال رسالة تأكيد الى البريد الالكتروني الرجاء الضعط عليها لتفعيل الحساب.</h4>
+        <h4>اذا لم تصلك رسالة يمكنك الضغط على اعادة الارسال</h4>
+
+        <div class="read-more-home read-more-slide-cat text-center margin-t-15 ">
+            <i class="fa fa-spin fa-spinner fa-3x" *ngIf="loading"></i>
+          <button type="submit" class="hvr-bounce-to-right" (click)="sendEmail()" *ngIf="!loading">اعادة الارسال</button>
+        </div>
+        <div class=" text-center">
+          <a routerLink="/login" class="btn btn-link  margin-b-0 text-center"> <span> تسجيل الدخول</span>
+          </a>
+        </div>
+      </div>
+      <!--box-min-content-->
+    </div>
+    <!--box-min-->
+
+  </div>
+</div>
+<!--login-page-->

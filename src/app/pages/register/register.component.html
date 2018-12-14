@@ -1,0 +1,75 @@
+<div class="login-page-main clearfix">
+
+
+  <div class="login-logo text-center margin-t-70  margin-b-70 margin-b-15">
+    <div class="camp-logo">
+      <a routerLink="/" class="margelogin"><img src="/assets/images/logo.svg" alt="الشعار" title="الرئيسية"></a>
+    </div>
+  </div>
+  <!--login-logo-->
+
+
+  <div class="col-md-4 col-md-offset-4">
+
+
+
+    <div class="box-min   ">
+      <div class="box-head">
+        <ul class="nav nav-tabs">
+          <li class="active btn-block text-center"><a> <span>  تسجيل حساب جديد  </span></a></li>
+        </ul>
+      </div>
+      <!--box-head-->
+      <div class="box-min-content">
+        <div class="form-main">
+          <div class="alert alert-danger" *ngIf="_error">{{_error}}</div>
+          <form [formGroup]="user" (ngSubmit)="signUp()">
+            <div class="login-main form-main">
+              <div class="form-login">
+                <div class="form-group">
+                  <input type="text" formControlName="name" id="name" class="form-control" placeholder="الاسم الكامل"
+                    autofocus>
+                  <div class="alert alert-danger" *ngIf="name.invalid && name.touched">يجب كتابة الاسم الكامل</div>
+                </div>
+                <div class="form-group">
+                  <input type="email" formControlName="email" id="email" class="form-control" placeholder=" البريد الالكتروني">
+                  <div class="alert alert-danger" *ngIf="email.invalid && email.touched">يجب كتابة بريد صحيح</div>
+                </div>
+                <div class="form-group">
+                  <input type="password" formControlName="password" id="password" class="form-control" placeholder="كلمة المرور">
+                  <div class="alert alert-danger" *ngIf="password.invalid && password.touched">يجب كتابة كلمة السر من 6
+                    الي 25 خانة</div>
+                </div>
+                <div class="form-group">
+                  <input type="password" formControlName="passwordConfirm" id="passwordConfirm" class="form-control"
+                    placeholder=" تأكيد كلمة المرور  ">
+                  <div class="alert alert-danger" *ngIf="passwordConfirm.invalid && passwordConfirm.errors?.required && passwordConfirm.touched">يجب
+                    كتابة تأكيد كلمة السر</div>
+                  <div class="alert alert-danger" *ngIf="passwordConfirm.errors?.confirm">يجب كتابة كلمة السر من 6 الي
+                    25 خانة</div>
+                </div>
+                <div class="read-more-home read-more-slide-cat text-center margin-t-15 ">
+                  <i class="fa fa-spin fa-spinner fa-3x" *ngIf="loading"></i>
+                  <button type="submit" class="hvr-bounce-to-right" [disabled]="user.invalid" *ngIf="!loading"> تسجيل</button>
+                </div>
+                <!-- read-more-slide-cat -->
+                <div class=" text-center">
+                  <a routerLink="/login" class="btn btn-link  margin-b-0 text-center"> <span> تسجيل الدخول </span>
+                  </a>
+                </div>
+                <!-- text-center -->
+              </div>
+              <!--form-login-->
+            </div>
+            <!--login-main-->
+          </form>
+        </div>
+        <!--form-main-->
+      </div>
+      <!--box-min-content-->
+    </div>
+    <!--box-min-->
+
+  </div>
+</div>
+<!--login-page-->
