@@ -1,9 +1,9 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AngularFireModule } from '@angular/fire';
+// import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
+// import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -33,6 +33,9 @@ import { PaymentsService } from './services/payments-service/payments.service';
 import { LoadingComponent } from './components/loading/loading.component';
 import { UserSettingsService } from './services/user-settings-service/user-settings.service';
 import { NumberOnlyDirective } from './directives/number-only/number-only.directive';
+
+import { AngularFireModule } from "angularfire2"
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 // new page
 import { HomeCtnComponent } from "./contents/home/home.component";
@@ -73,15 +76,15 @@ import { PrivacyComponent } from "./contents/privacy/privacy.component";
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule,
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
     AngularDateTimePickerModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
   ],
   providers: [ 
     AuthService,

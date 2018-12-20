@@ -2,6 +2,17 @@
 <div id="main">
   <div app-sidebar class="col-md-3 col-sm-12 col-xs-12 sidebar "></div>
   <div class=" main-content">
+
+    <div class="uploadLogo" style="width: 100%; margin: 60px;">
+      <label for="file">File:</label>
+      <input type="file" (change)="upload($event)" accept=".png,.jpg,.svg" />
+
+      <progress max="100" [value]="(uploadProgress | async)"></progress>
+
+      <a [href]="downloadURL | async" style="display: block;">{{ downloadURL | async }}</a>
+      <img [src]="downloadURL | async" style="width: 300px; display: block;">
+    </div>
+
     <div class="content-wrapper">
       <div class="main-content-in">
         <div class=" ">
@@ -56,102 +67,104 @@
                             <div class="form-group">
                               <div class="company-Settings-img clearfix">
                                 <div class="images-r pull-left" *ngIf="!uploadLoading">
-                                  <img [src]="logoUrl || '/assets/images/logo.svg'" alt="شعار شركتك" title="شعار شركتك">
+                                  <img [hidden]="!logoUrl" [src]="logoUrl | async" alt="شعار شركتك" title="شعار شركتك">
+                                  <img [hidden]="logoUrl" src="/assets/images/logo.svg" alt="شعار شركتك" title="شعار شركتك">
                                 </div>
                                 <!-- images-r -->
                                 <div class="form-group">
                                   <div *ngIf="!uploadLoading" class="fileupload fileupload-new pic-img-up"
-                                    data-provides="fileupload">
-                                    <span class="btn btn-primary btn-file">
-                                      <span class="fileupload-new"><i class="fa fa-cloud-upload"></i> اختر صورة </span>
-                                      <span class="fileupload-exists"><i class="fa fa-cloud-upload"></i> تغيير</span>
-                                      <input type="file" (change)="uploadLogo($event)" accept=".png,.jpg,.svg" />
-                                    </span>
-                                    <div style="font-size: 10px;color: #8c8a8a;">حجم الشعار المسموح به 1MB , الصيغ المسموحة ( PNG , JPG , JPEG )</div>
-                                  </div>
-                                  <div *ngIf="uploadLoading" app-loading></div>
+                                  data-provides="fileupload">
+                                  <span class="btn btn-primary btn-file">
+                                    <span class="fileupload-new"><i class="fa fa-cloud-upload"></i> اختر صورة </span>
+                                    <span class="fileupload-exists"><i class="fa fa-cloud-upload"></i> تغيير</span>
+                                    <!-- <input type="file" (change)="uploadLogo($event)" accept="image/*" /> -->
+                                    <input id="uploadFile" type="file" (change)="upload($event)" accept=".png,.jpg,.svg" />
+                                  </span>
+                                  <div style="font-size: 10px;color: #8c8a8a;">حجم الشعار المسموح به 1MB , الصيغ المسموحة ( PNG , JPG , JPEG, SVG )</div>
                                 </div>
-                                <!--form-group-->
+                                <div *ngIf="uploadLoading" app-loading></div>
                               </div>
-                              <!-- company-Settings-img -->
+                              <!--form-group-->
                             </div>
-                            <!--form-group-->
+                            <!-- company-Settings-img -->
                           </div>
-                          <!--col-md-6-->
-                          <div class="col-xs-12">
-                            <div class="form-group">
-                              <label> اسم الشركة </label>
-                              <input type="text" formControlName="company_name" class="form-control" placeholder=" ادخل اسم الشركة">
-                            </div>
-                            <!--form-group-->
+                          <!--form-group-->
+                        </div>
+                        <!--col-md-6-->
+                        <div class="col-xs-12">
+                          <div class="form-group">
+                            <label> اسم الشركة </label>
+                            <input type="text" formControlName="company_name" class="form-control" placeholder=" ادخل اسم الشركة">
                           </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <label> رقم الجوال </label>
-                              <input type="text" formControlName="company_phone" class="form-control" placeholder=" ادخل رقم الجوال">
-                            </div>
-                            <!--form-group-->
+                          <!--form-group-->
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label> رقم الجوال </label>
+                            <input type="text" formControlName="company_phone" class="form-control" placeholder=" ادخل رقم الجوال">
                           </div>
-                          <!--col-md-6-->
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <label> الايميل </label>
-                              <input type="text" formControlName="company_email" class="form-control" placeholder=" ادخل الايميل ">
-                            </div>
-                            <!--form-group-->
+                          <!--form-group-->
+                        </div>
+                        <!--col-md-6-->
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label> الايميل </label>
+                            <input type="text" formControlName="company_email" class="form-control" placeholder=" ادخل الايميل ">
                           </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <label> الرقم الضريبي </label>
-                              <input type="text" onlyNumber formControlName="fees_number" class="form-control"
-                                maxlength="25" placeholder="الرقم الضريبي ">
-                            </div>
-                            <!--form-group-->
+                          <!--form-group-->
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label> الرقم الضريبي </label>
+                            <input type="text" onlyNumber formControlName="fees_number" class="form-control"
+                            maxlength="25" placeholder="الرقم الضريبي ">
                           </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <label> اللغة </label>
-                              <select formControlName="lang" class="form-control">
-                                <option value="ar"> Arabic </option>
-                                <option value="en"> English </option>
-                              </select>
-                            </div>
+                          <!--form-group-->
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label> اللغة </label>
+                            <select formControlName="lang" class="form-control">
+                              <option value="ar"> Arabic </option>
+                              <option value="en"> English </option>
+                            </select>
                           </div>
                         </div>
-                        <!--row-->
                       </div>
-                      <!--Settings-form-main-->
+                      <!--row-->
+                    </div>
+                    <!--Settings-form-main-->
 
-                      <div class="">
-                        <div class=" text-left">
-                          <div class="read-more-home read-more-slide-cat">
-                            <button type="submit" [disabled]="settings.invalid" class="hvr-bounce-to-right">حفظ</button>
-                            <button type="button" class="btn-b hvr-bounce-to-right">الغاء</button>
-                          </div>
-                          <!-- read-more-slide-cat -->
+                    <div class="">
+                      <div class=" text-left">
+                        <div class="read-more-home read-more-slide-cat">
+                          <button type="submit" [disabled]="settings.invalid" class="hvr-bounce-to-right">حفظ</button>
+                          <button type="button" class="btn-b hvr-bounce-to-right">الغاء</button>
                         </div>
                         <!-- read-more-slide-cat -->
                       </div>
-                      <!-- read-more-absolute -->
-                    </form>
-                  </div>
-                  <!--form-main-->
+                      <!-- read-more-slide-cat -->
+                    </div>
+                    <!-- read-more-absolute -->
+                  </form>
                 </div>
-                <!--box-min-content-->
+                <!--form-main-->
               </div>
-              <!--box-min-->
+              <!--box-min-content-->
             </div>
-            <!-- col-md-9 -->
+            <!--box-min-->
           </div>
-          <!-- box-min2 -->
+          <!-- col-md-9 -->
         </div>
-        <!-- row -->
+        <!-- box-min2 -->
       </div>
-      <!--content-wrapper -->
+      <!-- row -->
     </div>
-    <!--col-md-9 main-content -->
-    <footer id="footer" app-footer></footer>
+    <!--content-wrapper -->
   </div>
-  <!--main-content-in-->
+  <!--col-md-9 main-content -->
+  <footer id="footer" app-footer></footer>
+</div>
+<!--main-content-in-->
 
 </div>

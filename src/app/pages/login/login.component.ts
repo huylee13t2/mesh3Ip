@@ -51,7 +51,6 @@ export class LoginComponent implements OnInit {
 
     this.authService.doLogin(this.user.value)
       .then(res => {
-        console.log(res);
         if (res.user.emailVerified) {
           localStorage.setItem("is_login", "true");
           this.authService.setLoginCookie(res.user);

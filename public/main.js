@@ -113,38 +113,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
-/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var ng2_cookies__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ng2-cookies */ "./node_modules/ng2-cookies/index.js");
-/* harmony import */ var ng2_cookies__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(ng2_cookies__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var angular2_datetimepicker__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! angular2-datetimepicker */ "./node_modules/angular2-datetimepicker/index.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
-/* harmony import */ var _pages_new_invoice_new_invoice_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/new-invoice/new-invoice.component */ "./src/app/pages/new-invoice/new-invoice.component.ts");
-/* harmony import */ var _pages_settings_settings_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/settings/settings.component */ "./src/app/pages/settings/settings.component.ts");
-/* harmony import */ var _pages_export_invoice_export_invoice_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/export-invoice/export-invoice.component */ "./src/app/pages/export-invoice/export-invoice.component.ts");
-/* harmony import */ var _pages_informations_informations_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/informations/informations.component */ "./src/app/pages/informations/informations.component.ts");
-/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
-/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var _components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/sidebar/sidebar.component */ "./src/app/components/sidebar/sidebar.component.ts");
-/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
-/* harmony import */ var _services_auth_service_auth_service_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./services/auth-service/auth-service.service */ "./src/app/services/auth-service/auth-service.service.ts");
-/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
-/* harmony import */ var _services_lang_lang_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./services/lang/lang.service */ "./src/app/services/lang/lang.service.ts");
-/* harmony import */ var _pages_email_verify_email_verify_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/email-verify/email-verify.component */ "./src/app/pages/email-verify/email-verify.component.ts");
-/* harmony import */ var _pages_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/reset-password/reset-password.component */ "./src/app/pages/reset-password/reset-password.component.ts");
-/* harmony import */ var _services_billings_service_billings_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./services/billings-service/billings.service */ "./src/app/services/billings-service/billings.service.ts");
-/* harmony import */ var _services_payments_service_payments_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./services/payments-service/payments.service */ "./src/app/services/payments-service/payments.service.ts");
-/* harmony import */ var _components_loading_loading_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/loading/loading.component */ "./src/app/components/loading/loading.component.ts");
-/* harmony import */ var _services_user_settings_service_user_settings_service__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./services/user-settings-service/user-settings.service */ "./src/app/services/user-settings-service/user-settings.service.ts");
-/* harmony import */ var _directives_number_only_number_only_directive__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./directives/number-only/number-only.directive */ "./src/app/directives/number-only/number-only.directive.ts");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var ng2_cookies__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ng2-cookies */ "./node_modules/ng2-cookies/index.js");
+/* harmony import */ var ng2_cookies__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(ng2_cookies__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var angular2_datetimepicker__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! angular2-datetimepicker */ "./node_modules/angular2-datetimepicker/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _pages_home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./pages/home/home.component */ "./src/app/pages/home/home.component.ts");
+/* harmony import */ var _pages_new_invoice_new_invoice_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/new-invoice/new-invoice.component */ "./src/app/pages/new-invoice/new-invoice.component.ts");
+/* harmony import */ var _pages_settings_settings_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./pages/settings/settings.component */ "./src/app/pages/settings/settings.component.ts");
+/* harmony import */ var _pages_export_invoice_export_invoice_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/export-invoice/export-invoice.component */ "./src/app/pages/export-invoice/export-invoice.component.ts");
+/* harmony import */ var _pages_informations_informations_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/informations/informations.component */ "./src/app/pages/informations/informations.component.ts");
+/* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+/* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/register/register.component */ "./src/app/pages/register/register.component.ts");
+/* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "./src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var _components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/sidebar/sidebar.component */ "./src/app/components/sidebar/sidebar.component.ts");
+/* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _services_auth_service_auth_service_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/auth-service/auth-service.service */ "./src/app/services/auth-service/auth-service.service.ts");
+/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
+/* harmony import */ var _services_lang_lang_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./services/lang/lang.service */ "./src/app/services/lang/lang.service.ts");
+/* harmony import */ var _pages_email_verify_email_verify_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./pages/email-verify/email-verify.component */ "./src/app/pages/email-verify/email-verify.component.ts");
+/* harmony import */ var _pages_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./pages/reset-password/reset-password.component */ "./src/app/pages/reset-password/reset-password.component.ts");
+/* harmony import */ var _services_billings_service_billings_service__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./services/billings-service/billings.service */ "./src/app/services/billings-service/billings.service.ts");
+/* harmony import */ var _services_payments_service_payments_service__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./services/payments-service/payments.service */ "./src/app/services/payments-service/payments.service.ts");
+/* harmony import */ var _components_loading_loading_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/loading/loading.component */ "./src/app/components/loading/loading.component.ts");
+/* harmony import */ var _services_user_settings_service_user_settings_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./services/user-settings-service/user-settings.service */ "./src/app/services/user-settings-service/user-settings.service.ts");
+/* harmony import */ var _directives_number_only_number_only_directive__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./directives/number-only/number-only.directive */ "./src/app/directives/number-only/number-only.directive.ts");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_33__);
 /* harmony import */ var _contents_home_home_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./contents/home/home.component */ "./src/app/contents/home/home.component.ts");
 /* harmony import */ var _contents_header_header_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./contents/header/header.component */ "./src/app/contents/header/header.component.ts");
 /* harmony import */ var _contents_footer_footer_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./contents/footer/footer.component */ "./src/app/contents/footer/footer.component.ts");
@@ -161,7 +163,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+// import { AngularFireModule } from '@angular/fire';
 
+// import { AngularFireStorageModule } from '@angular/fire/storage';
 
 
 
@@ -206,21 +210,21 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"],
-                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_14__["HomeComponent"],
-                _pages_new_invoice_new_invoice_component__WEBPACK_IMPORTED_MODULE_15__["NewInvoiceComponent"],
-                _pages_settings_settings_component__WEBPACK_IMPORTED_MODULE_16__["SettingsComponent"],
-                _pages_export_invoice_export_invoice_component__WEBPACK_IMPORTED_MODULE_17__["ExportInvoiceComponent"],
-                _pages_informations_informations_component__WEBPACK_IMPORTED_MODULE_18__["InformationsComponent"],
-                _pages_login_login_component__WEBPACK_IMPORTED_MODULE_19__["LoginComponent"],
-                _pages_register_register_component__WEBPACK_IMPORTED_MODULE_20__["RegisterComponent"],
-                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_21__["NavbarComponent"],
-                _components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_22__["SidebarComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_23__["FooterComponent"],
-                _pages_email_verify_email_verify_component__WEBPACK_IMPORTED_MODULE_27__["EmailVerifyComponent"],
-                _pages_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_28__["ResetPasswordComponent"],
-                _components_loading_loading_component__WEBPACK_IMPORTED_MODULE_31__["LoadingComponent"],
-                _directives_number_only_number_only_directive__WEBPACK_IMPORTED_MODULE_33__["NumberOnlyDirective"],
+                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
+                _pages_home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"],
+                _pages_new_invoice_new_invoice_component__WEBPACK_IMPORTED_MODULE_13__["NewInvoiceComponent"],
+                _pages_settings_settings_component__WEBPACK_IMPORTED_MODULE_14__["SettingsComponent"],
+                _pages_export_invoice_export_invoice_component__WEBPACK_IMPORTED_MODULE_15__["ExportInvoiceComponent"],
+                _pages_informations_informations_component__WEBPACK_IMPORTED_MODULE_16__["InformationsComponent"],
+                _pages_login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
+                _pages_register_register_component__WEBPACK_IMPORTED_MODULE_18__["RegisterComponent"],
+                _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_19__["NavbarComponent"],
+                _components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_20__["SidebarComponent"],
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_21__["FooterComponent"],
+                _pages_email_verify_email_verify_component__WEBPACK_IMPORTED_MODULE_25__["EmailVerifyComponent"],
+                _pages_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_26__["ResetPasswordComponent"],
+                _components_loading_loading_component__WEBPACK_IMPORTED_MODULE_29__["LoadingComponent"],
+                _directives_number_only_number_only_directive__WEBPACK_IMPORTED_MODULE_31__["NumberOnlyDirective"],
                 // new page
                 _contents_header_header_component__WEBPACK_IMPORTED_MODULE_35__["HeaderCtnComponent"],
                 _contents_footer_footer_component__WEBPACK_IMPORTED_MODULE_36__["FooterCtnComponent"],
@@ -232,27 +236,27 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(_app_routes__WEBPACK_IMPORTED_MODULE_25__["appRoutes"]),
-                _angular_fire__WEBPACK_IMPORTED_MODULE_3__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].firebase),
-                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestoreModule"],
-                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_6__["AngularFireAuthModule"],
-                _angular_fire_storage__WEBPACK_IMPORTED_MODULE_5__["AngularFireStorageModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["BrowserAnimationsModule"],
-                angular2_datetimepicker__WEBPACK_IMPORTED_MODULE_11__["AngularDateTimePickerModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_12__["HttpClientModule"]
+                _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(_app_routes__WEBPACK_IMPORTED_MODULE_23__["appRoutes"]),
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestoreModule"],
+                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_4__["AngularFireAuthModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
+                angular2_datetimepicker__WEBPACK_IMPORTED_MODULE_9__["AngularDateTimePickerModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
+                angularfire2__WEBPACK_IMPORTED_MODULE_32__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].firebase),
+                angularfire2_storage__WEBPACK_IMPORTED_MODULE_33__["AngularFireStorageModule"],
             ],
             providers: [
-                _services_auth_service_auth_service_service__WEBPACK_IMPORTED_MODULE_24__["AuthService"],
-                _services_lang_lang_service__WEBPACK_IMPORTED_MODULE_26__["LangService"],
-                ng2_cookies__WEBPACK_IMPORTED_MODULE_10__["CookieService"],
-                _services_billings_service_billings_service__WEBPACK_IMPORTED_MODULE_29__["BillingsService"],
-                _services_payments_service_payments_service__WEBPACK_IMPORTED_MODULE_30__["PaymentsService"],
-                _services_user_settings_service_user_settings_service__WEBPACK_IMPORTED_MODULE_32__["UserSettingsService"],
+                _services_auth_service_auth_service_service__WEBPACK_IMPORTED_MODULE_22__["AuthService"],
+                _services_lang_lang_service__WEBPACK_IMPORTED_MODULE_24__["LangService"],
+                ng2_cookies__WEBPACK_IMPORTED_MODULE_8__["CookieService"],
+                _services_billings_service_billings_service__WEBPACK_IMPORTED_MODULE_27__["BillingsService"],
+                _services_payments_service_payments_service__WEBPACK_IMPORTED_MODULE_28__["PaymentsService"],
+                _services_user_settings_service_user_settings_service__WEBPACK_IMPORTED_MODULE_30__["UserSettingsService"],
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["Title"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]],
             exports: []
         })
     ], AppModule);
@@ -1546,7 +1550,7 @@ var EmailVerifyComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n.btn.btn-success{\r\n    background: #e0eef2;\r\n    border: none;\r\n    color: #57626c;\r\n    padding: 7px 15px;\r\n}\r\n\r\n#page-a4{\r\n\tbackground: #F5F6FA;\r\n}\r\n\r\n#page-A4{\r\n\twidth: 595px;\r\n\tmax-width: 595px;\r\n\theight: 842px;\r\n\tmin-height: 842px;\r\n\tborder: 1px solid #ddd;\r\n\tmargin: 30px auto;\r\n\tbackground: #fff;\r\n}\r\n\r\n.print-foot-A4{\r\n\tposition: fixed;\r\n\tbottom: 30px;\r\n\tright: 30px;\r\n}"
+module.exports = "\r\n.btn.btn-success{\r\n\tbackground: #e0eef2;\r\n\tborder: none;\r\n\tcolor: #57626c;\r\n\tpadding: 7px 15px;\r\n}\r\n\r\n#page-a4{\r\n\tbackground: #F5F6FA;\r\n}\r\n\r\n#page-A4{\r\n\twidth: 100%;\r\n\tmax-width: 100%;\r\n\theight: 1800px;\r\n\tmin-height: 1800px;\r\n\tborder: 1px solid #ddd;\r\n\tmargin: 30px auto;\r\n\tbackground: #fff;\r\n\tpadding: 90px !important;\r\n\tposition: relative;\r\n\twidth: 11.93in;\r\n\theight: 15.98in;\r\n}\r\n\r\n.main-A4{\r\n\tmargin-top: 200px;\r\n}\r\n\r\n.table-A4{\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n}\r\n\r\n.print-foot-A4{\r\n\tposition: fixed;\r\n\tbottom: 30px;\r\n\tright: 30px;\r\n}\r\n\r\n.print-foot-A4 button{\r\n\tbackground: #1468CF;\r\n\tcolor: #fff;\r\n}\r\n\r\n.print-foot-A4 button i{\r\n\tcolor: #fff;\r\n}\r\n\r\n.footer-pdf{\r\n\twidth: 100%;\r\n\tposition: absolute;\r\n\tbottom: 90px;\r\n\ttext-align: center;\r\n\tleft: 0;\r\n\tright: 0;\r\n}\r\n\r\n.footer-pdf .logo-footer{\r\n\twidth: 150px;\r\n\tmargin: 0 auto;\r\n}\r\n\r\n.footer-pdf .logo-footer img{\r\n\twidth: 100%;\r\n}\r\n\r\nul li{\r\n\tfont-size: 18px;\r\n\tline-height: 28px;\r\n}\r\n\r\ntable thead tr th{\r\n\tfont-size: 18px;\r\n\tpadding: 15px !important;\r\n}\r\n\r\ntable tbody tr td{\r\n\tfont-size: 18px;\r\n}\r\n"
 
 /***/ }),
 
@@ -1557,7 +1561,7 @@ module.exports = "\r\n.btn.btn-success{\r\n    background: #e0eef2;\r\n    borde
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section id=\"page-a4\">\n\n  <div class=\"container\" style=\"padding: 20px;\" *ngIf=\"loading.billing || (!loading.billing && !billing)\">\n    <div class=\"text-center margin-t-10\" *ngIf=\"loading.billing\">\n      <i class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i>\n    </div>\n    <div *ngIf=\"!loading.billing && !billing\">\n      <div class=\"alert alert-danger\">الفاتورة غير موجودة</div>\n      <div class=\"text-center\">\n        <a routerLink=\"/\">الصفحة الرئيسية</a>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"page-A4\" id=\"page-A4\" *ngIf=\"!loading.billing && billing\">\n    <header>\n      <div class=\"row\">\n        <div class=\"col-xs-6\">\n          <div class=\"a4-head-right\">\n            <ul>\n              <li> <span>فاتورة</span> #INV{{billing._number}}</li>\n              <li> <span>الي</span> : {{billing.company_name}}</li>\n              <li> <span>تاريخها</span> {{billing.date | date}}</li>\n              <li *ngIf=\"fees_number\"> <span> الرقم الضريبي</span> {{fees_number}}</li>\n            </ul>\n          </div>\n        </div>\n        <div class=\"col-xs-6\">\n          <div class=\"head-logo\">\n            <div class=\"camp-logo\">\n              <i *ngIf=\"loading.logo\" class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i>\n              <img *ngIf=\"!loading.logo\" style=\"max-width: 150px;max-height: 60px;width: auto; height: auto;\" [src]=\"logoUrl || './assets/images/sm-logo.svg'\"\n              alt=\"الشعار\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </header>\n    <main class=\"main-A4\">\n      <div class=\"  table-c table-A4 table-Invoices-popup\">\n        <table class=\"table\">\n          <thead>\n            <tr>\n              <th>الوصف</th>\n              <th>الوحدة</th>\n              <th>الكمية</th>\n              <th>الاجمالي</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr *ngFor=\"let p of billing.products\">\n              <td>{{p.description}}</td>\n              <td class=\"lang_en\">{{p.price | currency:' SR '}}</td>\n              <td class=\"lang_en\">{{p.quantity}}</td>\n              <td class=\"lang_en\">{{(p.price * p.quantity) | currency:' SR '}}</td>\n            </tr>\n            <tr>\n              <td class=\"total-table\"> المجموع</td>\n              <td class=\"lang_en\">{{billing.total | currency:' SR '}}</td>\n              <td> </td>\n              <td> </td>\n            </tr>\n            <tr *ngIf=\"loading.account\">\n              <td colspan=\"4\" class=\"text-center\" *ngIf=\"loading.account\"><i class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i></td>\n            </tr>\n            <tr *ngIf=\"!loading.account\">\n              <td> القيمة المضافة {{billing.fees}}%</td>\n              <td>{{ billing.total_fees | currency:' SR '}}</td>\n              <td> </td>\n              <td> </td>\n            </tr>\n            <tr>\n              <td class=\"total-table\"> الاجمالي</td>\n              <td class=\"total-table\">{{ billing.total_all | currency:' SR '}}</td>\n              <td> </td>\n              <td> </td>\n            </tr>\n\n          </tbody>\n        </table>\n      </div>\n\n      <!-- table-responsive -->\n      <div class=\"table-c  table-Invoices-popup\">\n        <i *ngIf=\"loading.account\" class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i>\n        <table *ngIf=\"!loading.account && accountInfo\" class=\"table\">\n          <thead>\n            <tr>\n              <th class=\"total-table\"> معلومات الدفع</th>\n              <th> </th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td style=\"width:50%\"> البنك : {{banks[accountInfo.bank_name]}} </td>\n              <td style=\"width:50%\">باسم : {{accountInfo.name}}</td>\n            </tr>\n            <tr>\n              <td style=\"width:50%\"> رقم الحساب : {{accountInfo.number}} </td>\n              <td style=\"width:50%\"> رقم الأيبان : {{accountInfo.iban}}</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n\n      \n      <!-- Invoices_popup_right_col_main -->\n    </main>\n  </div>\n  <!-- page-A4 -->\n\n  <div [hidden]=\"isPDF\" class=\"print-foot-A4\">\n    <i *ngIf=\"downloading || loading.logo || loading.account\" class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i>\n    <button type=\"button\" *ngIf=\"!downloading && !loading.logo && !loading.account\" class=\"btn btn-success text-white\" (click)=\"createPDFInvoice(billing._number)\">\n      <i class=\"fa fa-file-pdf-o\"></i> تحميل PDF </button>\n    </div>\n  </section>"
+module.exports = "<!-- <div class=\"container\"> -->\n  <section id=\"page-a4\">\n\n    <div class=\"container\" style=\"padding: 20px;\" *ngIf=\"loading.billing || (!loading.billing && !billing)\">\n      <div class=\"text-center margin-t-10\" *ngIf=\"loading.billing\">\n        <i class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i>\n      </div>\n      <div *ngIf=\"!loading.billing && !billing\">\n        <div class=\"alert alert-danger\">الفاتورة غير موجودة</div>\n        <div class=\"text-center\">\n          <a routerLink=\"/\">الصفحة الرئيسية</a>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"page-A4 \" id=\"page-A4\" *ngIf=\"!loading.billing && billing\">\n      <header>\n        <div class=\"row\">\n          <div class=\"col-xs-6\">\n            <div class=\"a4-head-right\">\n              <ul>\n                <li> <span>فاتورة</span> #INV{{billing._number}}</li>\n                <li> <span>الي</span> : {{billing.company_name}}</li>\n                <li> <span>تاريخها</span> {{billing.date | date}}</li>\n                <li *ngIf=\"fees_number\"> <span> الرقم الضريبي</span> {{fees_number}}</li>\n              </ul>\n            </div>\n          </div>\n          <div class=\"col-xs-6\">\n            <div class=\"head-logo\">\n              <div class=\"camp-logo\">\n                <i *ngIf=\"loading.logo\" class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i>\n                <img *ngIf=\"!loading.logo\" style=\"max-width: 150px;max-height: 60px;width: auto; height: auto;\" [src]=\"logoUrl || './assets/images/lg-pdf.svg'\"\n                alt=\"الشعار\">\n              </div>\n            </div>\n          </div>\n        </div>\n      </header>\n\n      <main class=\"main-A4\">\n        <div class=\"  table-c table-A4 table-Invoices-popup\">\n          <table class=\"table\">\n            <thead>\n              <tr>\n                <th>الوصف</th>\n                <th>الوحدة</th>\n                <th>الكمية</th>\n                <th>الاجمالي</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr *ngFor=\"let p of billing.products\">\n                <td>{{p.description}}</td>\n                <td class=\"lang_en\">{{p.price | currency:' SR '}}</td>\n                <td class=\"lang_en\">{{p.quantity}}</td>\n                <td class=\"lang_en\">{{(p.price * p.quantity) | currency:' SR '}}</td>\n              </tr>\n              <tr>\n                <td class=\"total-table\"> المجموع</td>\n                <td class=\"lang_en\">{{billing.total | currency:' SR '}}</td>\n                <td> </td>\n                <td> </td>\n              </tr>\n              <tr *ngIf=\"loading.account\">\n                <td colspan=\"4\" class=\"text-center\" *ngIf=\"loading.account\"><i class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i></td>\n              </tr>\n              <tr *ngIf=\"!loading.account\">\n                <td> القيمة المضافة {{billing.fees}}%</td>\n                <td>{{ billing.total_fees | currency:' SR '}}</td>\n                <td> </td>\n                <td> </td>\n              </tr>\n              <tr>\n                <td class=\"total-table\"> الاجمالي</td>\n                <td class=\"total-table\">{{ billing.total_all | currency:' SR '}}</td>\n                <td> </td>\n                <td> </td>\n              </tr>\n\n            </tbody>\n          </table>\n        </div>\n\n        <!-- table-responsive -->\n        <div class=\"table-c  table-Invoices-popup\">\n          <i *ngIf=\"loading.account\" class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i>\n          <table *ngIf=\"!loading.account && accountInfo\" class=\"table\">\n            <thead>\n              <tr>\n                <th class=\"total-table\"> معلومات الدفع</th>\n                <th> </th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td style=\"width:50%\"> البنك <span>: {{banks[accountInfo.bank_name]}}</span> </td>\n                <td style=\"width:50%\">باسم <span>: {{accountInfo.name}}</span></td>\n              </tr>\n              <tr>\n                <td style=\"width:50%\"> رقم الحساب <span>: {{accountInfo.number}}</span> </td>\n                <td style=\"width:50%\"> رقم الأيبان <span>: {{accountInfo.iban}}</span></td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n\n        <div class=\"footer-pdf\">\n          <div class=\"logo-footer\">\n            <img src=\"./assets/images/group58.svg\">\n          </div>\n        </div>\n        <!-- Invoices_popup_right_col_main -->\n      </main>\n    </div>\n    <!-- page-A4 -->\n\n    <div class=\"print-foot-A4\">\n      <i *ngIf=\"downloading || loading.logo || loading.account\" class=\"fa fa-spin fa-spinner fa-3x color-orange\"></i>\n      <button type=\"button\" *ngIf=\"!downloading && !loading.logo && !loading.account\" class=\"btn btn-success text-white\" (click)=\"createPDFInvoice(billing._number)\">\n        <i class=\"fa fa-file-pdf-o\"></i> تحميل PDF </button>\n      </div>\n    </section>\n  <!-- </div> -->"
 
 /***/ }),
 
@@ -1681,9 +1685,9 @@ var ExportInvoiceComponent = /** @class */ (function () {
             var width = canvas.width;
             var height = canvas.clientHeight;
             var contentDataURL = canvas.toDataURL('image/png', 1.0);
-            var pdf = new jspdf__WEBPACK_IMPORTED_MODULE_8__('p', 'pt', 'a4'); // A4 size page of PDF 
+            var pdf = new jspdf__WEBPACK_IMPORTED_MODULE_8__('p', 'in', 'a4'); // A4 size page of PDF 
             var position = 0;
-            pdf.addImage(contentDataURL, 'PNG', 0, 0, 595, 842);
+            pdf.addImage(contentDataURL, 'PNG', 0, 0, 8.3, 11.7);
             pdf.save(fileName + '.pdf'); // Generated PDF  
         });
     };
@@ -2322,7 +2326,6 @@ var LoginComponent = /** @class */ (function () {
         this._error = false;
         this.authService.doLogin(this.user.value)
             .then(function (res) {
-            console.log(res);
             if (res.user.emailVerified) {
                 localStorage.setItem("is_login", "true");
                 _this.authService.setLoginCookie(res.user);
@@ -2834,7 +2837,7 @@ module.exports = "img{\r\n    height: 60px;\r\n    width: 150px;\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header app-navbar id=\"header-con\"></header>\n<div id=\"main\">\n  <div app-sidebar class=\"col-md-3 col-sm-12 col-xs-12 sidebar \"></div>\n  <div class=\" main-content\">\n    <div class=\"content-wrapper\">\n      <div class=\"main-content-in\">\n        <div class=\" \">\n          <div class=\"box-min2 box-fff-bg clearfix\">\n            <div class=\"col-md-4 pp-left Settings-sidebar \">\n              <div class=\"box-min  box-none-bg \">\n                <div class=\"box-head margin-b-15\">\n                  <div class=\"box-head-link\">\n                    <a class=\"head-link-a\">\n                      معلومات عامة\n                    </a>\n                  </div>\n                  <!--box-head-link-->\n                </div>\n                <!--box-head-->\n                <div class=\"Settings-sidebar-info\">\n                  <ul>\n                    <li><a>الامان و الخصوصية</a> </li>\n                    <li><a> مساعدة ؟</a> </li>\n                    <li><a> اتصل بنا </a> </li>\n                    <li><a class=\"color-red\"> حذف الحساب</a> </li>\n                  </ul>\n                </div>\n                <!-- Settings-sidebar-info -->\n\n              </div>\n              <!--box-min-->\n            </div>\n            <!-- col-md-8 -->\n            <div class=\"col-md-8 padding-r-0\">\n              <div class=\"box-min   \">\n                <div class=\"box-head\">\n                  <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a> <span> معلومات عامة </span></a></li>\n                  </ul>\n                </div>\n                <!--box-head-->\n                <div class=\"box-min-content\">\n                  <div class=\"alert alert-success\" *ngIf=\"changeSuccess\">تم حفظ التغييرات</div>\n                  <div [ngSwitch]=\"uploadFailed\">\n                    <div class=\"alert alert-danger\" *ngSwitchCase=\"'invalid'\">خطأ لم يتم حفظ الصورة</div>\n                    <div class=\"alert alert-danger\" *ngSwitchCase=\"'type'\">صيغة الصورة غير مدعومة</div>\n                    <div class=\"alert alert-danger\" *ngSwitchCase=\"'size'\">اقصى حجم للشعار 1MB</div>\n                    <div class=\"alert alert-danger\" *ngSwitchCase=\"'image_size'\">مقاسات الشعار يجب ان تكون 150 * 60 او 60*60</div>\n                  </div>\n                  <div app-loading *ngIf=\"loading\"></div>\n                  <div class=\"form-main\" *ngIf=\"!loading\">\n                    <form [formGroup]=\"settings\" (ngSubmit)=\"save()\">\n                      <div class=\" Settings-form-main\">\n                        <div class=\"row Settings-clone\">\n                          <div class=\"col-md-12\">\n                            <div class=\"form-group\">\n                              <div class=\"company-Settings-img clearfix\">\n                                <div class=\"images-r pull-left\" *ngIf=\"!uploadLoading\">\n                                  <img [src]=\"logoUrl || '/assets/images/logo.svg'\" alt=\"شعار شركتك\" title=\"شعار شركتك\">\n                                </div>\n                                <!-- images-r -->\n                                <div class=\"form-group\">\n                                  <div *ngIf=\"!uploadLoading\" class=\"fileupload fileupload-new pic-img-up\"\n                                    data-provides=\"fileupload\">\n                                    <span class=\"btn btn-primary btn-file\">\n                                      <span class=\"fileupload-new\"><i class=\"fa fa-cloud-upload\"></i> اختر صورة </span>\n                                      <span class=\"fileupload-exists\"><i class=\"fa fa-cloud-upload\"></i> تغيير</span>\n                                      <input type=\"file\" (change)=\"uploadLogo($event)\" accept=\".png,.jpg,.svg\" />\n                                    </span>\n                                    <div style=\"font-size: 10px;color: #8c8a8a;\">حجم الشعار المسموح به 1MB , الصيغ المسموحة ( PNG , JPG , JPEG )</div>\n                                  </div>\n                                  <div *ngIf=\"uploadLoading\" app-loading></div>\n                                </div>\n                                <!--form-group-->\n                              </div>\n                              <!-- company-Settings-img -->\n                            </div>\n                            <!--form-group-->\n                          </div>\n                          <!--col-md-6-->\n                          <div class=\"col-xs-12\">\n                            <div class=\"form-group\">\n                              <label> اسم الشركة </label>\n                              <input type=\"text\" formControlName=\"company_name\" class=\"form-control\" placeholder=\" ادخل اسم الشركة\">\n                            </div>\n                            <!--form-group-->\n                          </div>\n                          <div class=\"col-md-6\">\n                            <div class=\"form-group\">\n                              <label> رقم الجوال </label>\n                              <input type=\"text\" formControlName=\"company_phone\" class=\"form-control\" placeholder=\" ادخل رقم الجوال\">\n                            </div>\n                            <!--form-group-->\n                          </div>\n                          <!--col-md-6-->\n                          <div class=\"col-md-6\">\n                            <div class=\"form-group\">\n                              <label> الايميل </label>\n                              <input type=\"text\" formControlName=\"company_email\" class=\"form-control\" placeholder=\" ادخل الايميل \">\n                            </div>\n                            <!--form-group-->\n                          </div>\n                          <div class=\"col-md-6\">\n                            <div class=\"form-group\">\n                              <label> الرقم الضريبي </label>\n                              <input type=\"text\" onlyNumber formControlName=\"fees_number\" class=\"form-control\"\n                                maxlength=\"25\" placeholder=\"الرقم الضريبي \">\n                            </div>\n                            <!--form-group-->\n                          </div>\n                          <div class=\"col-md-6\">\n                            <div class=\"form-group\">\n                              <label> اللغة </label>\n                              <select formControlName=\"lang\" class=\"form-control\">\n                                <option value=\"ar\"> Arabic </option>\n                                <option value=\"en\"> English </option>\n                              </select>\n                            </div>\n                          </div>\n                        </div>\n                        <!--row-->\n                      </div>\n                      <!--Settings-form-main-->\n\n                      <div class=\"\">\n                        <div class=\" text-left\">\n                          <div class=\"read-more-home read-more-slide-cat\">\n                            <button type=\"submit\" [disabled]=\"settings.invalid\" class=\"hvr-bounce-to-right\">حفظ</button>\n                            <button type=\"button\" class=\"btn-b hvr-bounce-to-right\">الغاء</button>\n                          </div>\n                          <!-- read-more-slide-cat -->\n                        </div>\n                        <!-- read-more-slide-cat -->\n                      </div>\n                      <!-- read-more-absolute -->\n                    </form>\n                  </div>\n                  <!--form-main-->\n                </div>\n                <!--box-min-content-->\n              </div>\n              <!--box-min-->\n            </div>\n            <!-- col-md-9 -->\n          </div>\n          <!-- box-min2 -->\n        </div>\n        <!-- row -->\n      </div>\n      <!--content-wrapper -->\n    </div>\n    <!--col-md-9 main-content -->\n    <footer id=\"footer\" app-footer></footer>\n  </div>\n  <!--main-content-in-->\n\n</div>"
+module.exports = "<header app-navbar id=\"header-con\"></header>\n<div id=\"main\">\n  <div app-sidebar class=\"col-md-3 col-sm-12 col-xs-12 sidebar \"></div>\n  <div class=\" main-content\">\n\n    <div class=\"uploadLogo\" style=\"width: 100%; margin: 60px;\">\n      <label for=\"file\">File:</label>\n      <input type=\"file\" (change)=\"upload($event)\" accept=\".png,.jpg,.svg\" />\n\n      <progress max=\"100\" [value]=\"(uploadProgress | async)\"></progress>\n\n      <a [href]=\"downloadURL | async\" style=\"display: block;\">{{ downloadURL | async }}</a>\n      <img [src]=\"downloadURL | async\" style=\"width: 300px; display: block;\">\n    </div>\n\n    <div class=\"content-wrapper\">\n      <div class=\"main-content-in\">\n        <div class=\" \">\n          <div class=\"box-min2 box-fff-bg clearfix\">\n            <div class=\"col-md-4 pp-left Settings-sidebar \">\n              <div class=\"box-min  box-none-bg \">\n                <div class=\"box-head margin-b-15\">\n                  <div class=\"box-head-link\">\n                    <a class=\"head-link-a\">\n                      معلومات عامة\n                    </a>\n                  </div>\n                  <!--box-head-link-->\n                </div>\n                <!--box-head-->\n                <div class=\"Settings-sidebar-info\">\n                  <ul>\n                    <li><a>الامان و الخصوصية</a> </li>\n                    <li><a> مساعدة ؟</a> </li>\n                    <li><a> اتصل بنا </a> </li>\n                    <li><a class=\"color-red\"> حذف الحساب</a> </li>\n                  </ul>\n                </div>\n                <!-- Settings-sidebar-info -->\n\n              </div>\n              <!--box-min-->\n            </div>\n            <!-- col-md-8 -->\n            <div class=\"col-md-8 padding-r-0\">\n              <div class=\"box-min   \">\n                <div class=\"box-head\">\n                  <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a> <span> معلومات عامة </span></a></li>\n                  </ul>\n                </div>\n                <!--box-head-->\n                <div class=\"box-min-content\">\n                  <div class=\"alert alert-success\" *ngIf=\"changeSuccess\">تم حفظ التغييرات</div>\n                  <div [ngSwitch]=\"uploadFailed\">\n                    <div class=\"alert alert-danger\" *ngSwitchCase=\"'invalid'\">خطأ لم يتم حفظ الصورة</div>\n                    <div class=\"alert alert-danger\" *ngSwitchCase=\"'type'\">صيغة الصورة غير مدعومة</div>\n                    <div class=\"alert alert-danger\" *ngSwitchCase=\"'size'\">اقصى حجم للشعار 1MB</div>\n                    <div class=\"alert alert-danger\" *ngSwitchCase=\"'image_size'\">مقاسات الشعار يجب ان تكون 150 * 60 او 60*60</div>\n                  </div>\n                  <div app-loading *ngIf=\"loading\"></div>\n                  <div class=\"form-main\" *ngIf=\"!loading\">\n                    <form [formGroup]=\"settings\" (ngSubmit)=\"save()\">\n                      <div class=\" Settings-form-main\">\n                        <div class=\"row Settings-clone\">\n                          <div class=\"col-md-12\">\n                            <div class=\"form-group\">\n                              <div class=\"company-Settings-img clearfix\">\n                                <div class=\"images-r pull-left\" *ngIf=\"!uploadLoading\">\n                                  <img [hidden]=\"!logoUrl\" [src]=\"logoUrl | async\" alt=\"شعار شركتك\" title=\"شعار شركتك\">\n                                  <img [hidden]=\"logoUrl\" src=\"/assets/images/logo.svg\" alt=\"شعار شركتك\" title=\"شعار شركتك\">\n                                </div>\n                                <!-- images-r -->\n                                <div class=\"form-group\">\n                                  <div *ngIf=\"!uploadLoading\" class=\"fileupload fileupload-new pic-img-up\"\n                                  data-provides=\"fileupload\">\n                                  <span class=\"btn btn-primary btn-file\">\n                                    <span class=\"fileupload-new\"><i class=\"fa fa-cloud-upload\"></i> اختر صورة </span>\n                                    <span class=\"fileupload-exists\"><i class=\"fa fa-cloud-upload\"></i> تغيير</span>\n                                    <!-- <input type=\"file\" (change)=\"uploadLogo($event)\" accept=\"image/*\" /> -->\n                                    <input id=\"uploadFile\" type=\"file\" (change)=\"upload($event)\" accept=\".png,.jpg,.svg\" />\n                                  </span>\n                                  <div style=\"font-size: 10px;color: #8c8a8a;\">حجم الشعار المسموح به 1MB , الصيغ المسموحة ( PNG , JPG , JPEG, SVG )</div>\n                                </div>\n                                <div *ngIf=\"uploadLoading\" app-loading></div>\n                              </div>\n                              <!--form-group-->\n                            </div>\n                            <!-- company-Settings-img -->\n                          </div>\n                          <!--form-group-->\n                        </div>\n                        <!--col-md-6-->\n                        <div class=\"col-xs-12\">\n                          <div class=\"form-group\">\n                            <label> اسم الشركة </label>\n                            <input type=\"text\" formControlName=\"company_name\" class=\"form-control\" placeholder=\" ادخل اسم الشركة\">\n                          </div>\n                          <!--form-group-->\n                        </div>\n                        <div class=\"col-md-6\">\n                          <div class=\"form-group\">\n                            <label> رقم الجوال </label>\n                            <input type=\"text\" formControlName=\"company_phone\" class=\"form-control\" placeholder=\" ادخل رقم الجوال\">\n                          </div>\n                          <!--form-group-->\n                        </div>\n                        <!--col-md-6-->\n                        <div class=\"col-md-6\">\n                          <div class=\"form-group\">\n                            <label> الايميل </label>\n                            <input type=\"text\" formControlName=\"company_email\" class=\"form-control\" placeholder=\" ادخل الايميل \">\n                          </div>\n                          <!--form-group-->\n                        </div>\n                        <div class=\"col-md-6\">\n                          <div class=\"form-group\">\n                            <label> الرقم الضريبي </label>\n                            <input type=\"text\" onlyNumber formControlName=\"fees_number\" class=\"form-control\"\n                            maxlength=\"25\" placeholder=\"الرقم الضريبي \">\n                          </div>\n                          <!--form-group-->\n                        </div>\n                        <div class=\"col-md-6\">\n                          <div class=\"form-group\">\n                            <label> اللغة </label>\n                            <select formControlName=\"lang\" class=\"form-control\">\n                              <option value=\"ar\"> Arabic </option>\n                              <option value=\"en\"> English </option>\n                            </select>\n                          </div>\n                        </div>\n                      </div>\n                      <!--row-->\n                    </div>\n                    <!--Settings-form-main-->\n\n                    <div class=\"\">\n                      <div class=\" text-left\">\n                        <div class=\"read-more-home read-more-slide-cat\">\n                          <button type=\"submit\" [disabled]=\"settings.invalid\" class=\"hvr-bounce-to-right\">حفظ</button>\n                          <button type=\"button\" class=\"btn-b hvr-bounce-to-right\">الغاء</button>\n                        </div>\n                        <!-- read-more-slide-cat -->\n                      </div>\n                      <!-- read-more-slide-cat -->\n                    </div>\n                    <!-- read-more-absolute -->\n                  </form>\n                </div>\n                <!--form-main-->\n              </div>\n              <!--box-min-content-->\n            </div>\n            <!--box-min-->\n          </div>\n          <!-- col-md-9 -->\n        </div>\n        <!-- box-min2 -->\n      </div>\n      <!-- row -->\n    </div>\n    <!--content-wrapper -->\n  </div>\n  <!--col-md-9 main-content -->\n  <footer id=\"footer\" app-footer></footer>\n</div>\n<!--main-content-in-->\n\n</div>"
 
 /***/ }),
 
@@ -2851,7 +2854,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
-/* harmony import */ var _services_user_settings_service_user_settings_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/user-settings-service/user-settings.service */ "./src/app/services/user-settings-service/user-settings.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _services_user_settings_service_user_settings_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/user-settings-service/user-settings.service */ "./src/app/services/user-settings-service/user-settings.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__);
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -2873,12 +2880,19 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
+// import { AngularFireStorage } from 'angularfire2/storage';
+
 var SettingsComponent = /** @class */ (function () {
-    function SettingsComponent(fb, settingsService) {
+    function SettingsComponent(fb, settingsService, sanitizer, afStorage) {
         this.fb = fb;
         this.settingsService = settingsService;
+        this.sanitizer = sanitizer;
+        this.afStorage = afStorage;
         this.loading = false;
         this.logoUrl = null;
+        this.urlImage = "";
         this.uploadLoading = false;
         this.exist = false;
         this.changeSuccess = false;
@@ -2916,6 +2930,45 @@ var SettingsComponent = /** @class */ (function () {
             });
         }).subscribe();
     };
+    SettingsComponent.prototype.upload = function (event) {
+        var _this = this;
+        var file = event.target.files[0];
+        // this.afStorage.upload('/upload/', file); 
+        // const randomId = Math.random().toString(36).substring(2);
+        // this.ref = this.afStorage.ref(randomId);
+        // this.task = this.ref.put(event.target.files[0]); 
+        var id = Math.random().toString(36).substring(2);
+        this.ref = this.afStorage.ref('/companies/' + id);
+        this.task = this.ref.put(file);
+        this.uploadProgress = this.task.percentageChanges();
+        this.changeSuccess = false;
+        this.uploadFailed = '';
+        if (!file) {
+            return;
+        }
+        if (file.size > 1048576) {
+            this.uploadFailed = 'size';
+            return;
+        }
+        if (file.type != 'image/png' && file.type != 'image/jpg' && file.type != 'image/jpeg' && file.type != 'image/svg+xml') {
+            this.uploadFailed = 'type';
+            return;
+        }
+        var _url = window.URL;
+        var logo = new Image();
+        logo.onload = function (e) {
+            var w = e.path[0].width;
+            var h = e.path[0].height;
+            _this.task.snapshotChanges().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["finalize"])(function () {
+                _this.downloadURL = _this.ref.getDownloadURL();
+                _this.logoUrl = _this.ref.getDownloadURL();
+                _this.uploadLoading = false;
+                localStorage.setItem("url_logo", JSON.parse(_this.logoUrl));
+            }))
+                .subscribe();
+        };
+        logo.src = _url.createObjectURL(file);
+    };
     SettingsComponent.prototype.save = function () {
         this.changeSuccess = false;
         var body;
@@ -2931,56 +2984,16 @@ var SettingsComponent = /** @class */ (function () {
         this.settingsService.update(this.id, body, this.exist);
         this.changeSuccess = true;
     };
-    SettingsComponent.prototype.uploadLogo = function (e) {
-        var _this = this;
-        var file = e.target.files[0];
-        this.changeSuccess = false;
-        this.uploadFailed = '';
-        if (!file) {
-            return;
-        }
-        if (file.size > 1048576) {
-            this.uploadFailed = 'size';
-            return;
-        }
-        if (file.type != 'image/png' && file.type != 'image/jpg' && file.type != 'image/jpeg') {
-            this.uploadFailed = 'type';
-            return;
-        }
-        var _url = window.URL;
-        var logo = new Image();
-        logo.onload = function (e) {
-            var w = e.path[0].width;
-            var h = e.path[0].height;
-            if (w != 60 && w != 150 && h != 60) {
-                _this.uploadFailed = 'image_size';
-                return;
-            }
-            _this.uploadTask = _this.settingsService.saveLogo(file);
-            _this.uploadLoading = true;
-            _this.uploadTask.task.then(function (res) {
-                if (res.state == 'success') {
-                    _this.uploadUrl = res.ref.name;
-                    _this.save();
-                    res.ref.getDownloadURL().then(function (res) {
-                        _this.logoUrl = res.i || res || null;
-                    });
-                    _this.uploadLoading = false;
-                }
-            }).catch(function (err) {
-                _this.uploadLoading = false;
-                _this.uploadFailed = 'invalid';
-            });
-        };
-        logo.src = _url.createObjectURL(file);
-    };
     SettingsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-settings',
             template: __webpack_require__(/*! ./settings.component.html */ "./src/app/pages/settings/settings.component.html"),
             styles: [__webpack_require__(/*! ./settings.component.css */ "./src/app/pages/settings/settings.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _services_user_settings_service_user_settings_service__WEBPACK_IMPORTED_MODULE_3__["UserSettingsService"]])
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+            _services_user_settings_service_user_settings_service__WEBPACK_IMPORTED_MODULE_4__["UserSettingsService"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"],
+            angularfire2_storage__WEBPACK_IMPORTED_MODULE_6__["AngularFireStorage"]])
     ], SettingsComponent);
     return SettingsComponent;
 }());
@@ -3340,7 +3353,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ng2_cookies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ng2-cookies */ "./node_modules/ng2-cookies/index.js");
 /* harmony import */ var ng2_cookies__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ng2_cookies__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _interfaces_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../interfaces/user */ "./src/app/interfaces/user.ts");
-/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angularfire2/storage */ "./node_modules/angularfire2/storage/index.js");
+/* harmony import */ var angularfire2_storage__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(angularfire2_storage__WEBPACK_IMPORTED_MODULE_4__);
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -3360,15 +3374,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+// import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 
 
 var UserSettingsService = /** @class */ (function () {
-    function UserSettingsService(db, cookieService, afstorage) {
+    function UserSettingsService(db, cookieService, 
+    // private afstorage: AngularFireStorage,
+    afStorage) {
         var _this = this;
         this.db = db;
         this.cookieService = cookieService;
-        this.afstorage = afstorage;
+        this.afStorage = afStorage;
         this.user = {};
         this.user = this.cookieService.getAll();
         if (this.user.user_id) {
@@ -3400,18 +3417,29 @@ var UserSettingsService = /** @class */ (function () {
         i.update(user);
     };
     UserSettingsService.prototype.saveLogo = function (file) {
-        var randome_id = Math.random().toString(26).substring(2);
-        var ref = this.afstorage.ref("/companies/" + randome_id);
-        return ref.put(file);
+        // console.log(file);
+        // const randome_id = Math.random().toString(26).substring(2);
+        // var ref = this.afStorage.ref(`/companies/${randome_id}`);
+        // console.log(ref);
+        // this. ref.put(file);
+        // const id = Math.random().toString(36).substring(2);
+        // this.ref = this.afStorage.ref(id);
+        // this.task = this.ref.put(file);
+        // console.log(this.task);
+        // return this.task;
+        this.afStorage.upload('/upload/', file);
+        return 1;
     };
     UserSettingsService.prototype.getLogo = function (url) {
-        return this.afstorage.ref("/companies/" + url).getDownloadURL();
+        return this.afStorage.ref("/companies/" + url).getDownloadURL();
     };
     UserSettingsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"], ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["CookieService"], _angular_fire_storage__WEBPACK_IMPORTED_MODULE_4__["AngularFireStorage"]])
+        __metadata("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"],
+            ng2_cookies__WEBPACK_IMPORTED_MODULE_2__["CookieService"],
+            angularfire2_storage__WEBPACK_IMPORTED_MODULE_4__["AngularFireStorage"]])
     ], UserSettingsService);
     return UserSettingsService;
 }());

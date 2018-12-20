@@ -111,9 +111,9 @@ export class ExportInvoiceComponent implements OnInit {
         var height        = canvas.clientHeight;
 
         const contentDataURL = canvas.toDataURL('image/png', 1.0) 
-        let pdf = new jspdf('p', 'pt', 'a4'); // A4 size page of PDF 
+        let pdf = new jspdf('p', 'in', 'a4'); // A4 size page of PDF 
         let position = 0; 
-        pdf.addImage(contentDataURL, 'PNG', 0, 0, 595, 842) 
+        pdf.addImage(contentDataURL, 'PNG', 0, 0, 8.3, 11.7) 
         pdf.save(fileName+'.pdf'); // Generated PDF  
       }); 
     } 

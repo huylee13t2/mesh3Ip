@@ -1,8 +1,16 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+// import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { CookieService } from 'ng2-cookies';
 import { User } from '../../interfaces/user';
-import { AngularFireStorage } from '@angular/fire/storage';
+// import { AngularFireStorage } from '@angular/fire/storage';
+// import { AngularFireStorage } from 'angularfire2/storage';
+
+import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators/map';
+
+
+import { AngularFireStorage } from 'angularfire2/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +22,12 @@ export class UserSettingsService {
 
 
 
-  constructor(private db: AngularFirestore, private cookieService: CookieService, private afstorage: AngularFireStorage) {
+  constructor(
+    private db: AngularFirestore,
+    private cookieService: CookieService,
+    // private afstorage: AngularFireStorage,
+    private afStorage: AngularFireStorage
+    ) {
     this.user = this.cookieService.getAll();
 
     if (this.user.user_id) {
@@ -49,12 +62,24 @@ export class UserSettingsService {
   }
 
   saveLogo(file) {
-    const randome_id = Math.random().toString(26).substring(2);
-    var ref = this.afstorage.ref(`/companies/${randome_id}`);
-    return ref.put(file);
+    // console.log(file);
+    // const randome_id = Math.random().toString(26).substring(2);
+    // var ref = this.afStorage.ref(`/companies/${randome_id}`);
+    // console.log(ref);
+    // this. ref.put(file);
+
+    // const id = Math.random().toString(36).substring(2);
+    // this.ref = this.afStorage.ref(id);
+    // this.task = this.ref.put(file);
+    // console.log(this.task);
+
+    // return this.task;
+
+    this.afStorage.upload('/upload/', file); 
+    return 1;
   }
 
   getLogo(url) {
-    return this.afstorage.ref(`/companies/${url}`).getDownloadURL();
+    return this.afStorage.ref(`/companies/${url}`).getDownloadURL();
   }
 }
